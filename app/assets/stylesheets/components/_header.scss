@@ -2,12 +2,14 @@
   display:flex;
   align-items: center;
   justify-content: space-around;
-  background-color: $green;
+  background-color: #464646;
+  height: 125px;
   h1 {
     font-weight: 400;
+    color: white;
   }
   p {
-    color: $green;
+    color: #464646;
   }
 }
 
@@ -28,3 +30,4 @@
     margin:0;
   }
 }
+

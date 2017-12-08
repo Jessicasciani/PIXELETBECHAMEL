@@ -2,12 +2,13 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: $green;
-  padding-bottom: 10px;
+  background-color: #464646;
   margin-bottom: 0 !important;
+  height: 30px;
+  color: white;
   a {
     text-decoration: none;
-    color: $black;
+    color: white;
     &:hover {
       color: $red;
       font-size: 19px;
@@ -20,15 +21,17 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: $green;
+  background-color: #464646;
+  height: 35px;
+  color: white;
   a {
-    color: $green;
+    color: #464646;
     transition: color 0.5s ease-in;
     text-decoration: none;
     margin-right: 25px;
     font-size: 15px;
     padding-right: 100px;
-    margin-bottom: 10px;
+    margin-bottom: 13px;
   }
   a:hover {
     font-style: italic;
@@ -37,7 +40,7 @@
 }
 
 .opacity {
-  a {color: $black !important;
+  a {color: white !important;
   // transition: 1s ease-in;
-}
+  }
 }

@@ -1,12 +1,31 @@
 // Specific CSS for your home-page
-.home {
-  margin-top: 100px;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  flex-direction: column;
-}
 
 body {
   background: white;
 }
+
+.carousel {
+  height: 570px;
+}
+
+.carousel-inner {
+  height: 570px;
+}
+
+.carousel-inner > .item > img {
+  object-fit: cover;
+  width: 1440px;
+  height: 570px;
+  background:linear-gradient(rgba(50,50,50,0.2), rgba(50,50,50,0.1));
+}
+
+
+.glyphicon.glyphicon-chevron-right {
+  margin-right: -90px;
+}
+
+.glyphicon.glyphicon-chevron-left {
+  margin-left: -90px;
+}
+
+

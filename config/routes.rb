@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
+  devise_for :users
   root to: 'pages#home'
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  get '/quisontelles', to: 'pages#qui'
+  get '/prestations', to: 'pages#prestations'
+  get '/portfolio', to: 'pages#portfolio'
+  get '/studio', to: 'pages#studio'
+  get '/contact', to: 'pages#contact'
 end
