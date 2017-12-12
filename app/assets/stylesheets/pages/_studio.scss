@@ -1,0 +1,52 @@
+.box-prix {
+    display: block;
+    margin: 26px auto;
+    width: 270px;
+    border: 1px dashed #D9D9DB;
+    height: 75px;
+    padding: 23px;
+    text-align: center;
+}
+
+
+.photo-studio {
+  margin-top: 10px;
+  object-fit: cover;
+  width: 575px;
+  height: 400px;
+  box-shadow: 1px 2px 1px #a6a6a6;
+}
+
+.photo-studio-xs {
+  display: block;
+  object-fit: cover;
+  width: 310px;
+  height: 280px;
+  box-shadow: 1px 2px 1px #a6a6a6;
+  margin: 10px auto;
+}
+
+
+.right {
+  margin: 30px 0;
+  color: $black;
+  font-family: Quicksand;
+}
+
+.left {
+  margin: 30px 20px;
+  margin-bottom: 60px;
+}
+
+.metro {
+  height: 30px;
+  width: 55px;
+  margin-bottom: 5px;
+  margin-left: 5px;
+}
+
+.adresse {
+  margin-top: 15px;
+  color: #545353;
+  line-height: 1em;
+}

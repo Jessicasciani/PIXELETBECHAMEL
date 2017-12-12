@@ -9,6 +9,8 @@ gem 'rails', '5.0.6'
 gem 'redis'
 gem 'devise'
 gem 'figaro'
+gem 'cloudinary'
+gem 'carrierwave', '~> 1.2'
 
 
 gem 'autoprefixer-rails'

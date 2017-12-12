@@ -1,24 +1,29 @@
 <div class="navbar hidden-xs hidden-sm">
-  <%= link_to "QUI SONT-ELLES ?", quisontelles_path, id: "qui" %>
+  <%= link_to "EQUIPE", equipe_path, id: "qui" %>
   <%= link_to "PRESTATIONS", prestations_path, id: "prestations" %>
   <%= link_to "PORTFOLIO", portfolio_path, id: "portfolio"%>
-  <%= link_to "STUDIO", studio_path  %>
+  <%= link_to "STUDIO", studio_path, id: "studio"  %>
   <%= link_to "CONTACT", contact_path %>
 </div>
 
-<div id="navbar-prestations" class="">
-  <%= link_to "Recettes" %>
-  <%= link_to "Produits" %>
-  <%= link_to "Stop Motion"  %>
-  <%= link_to "Pack" %>
+<div id="navbar-prestations" class="hidden-xs hidden-sm">
+  <%= link_to "Recettes", prestations_recettes_path %>
+  <%= link_to "Produits", prestations_produits_path %>
+  <%= link_to "Stop Motion", prestations_stopmotion_path %>
+  <%= link_to "Pack", prestations_pack_path %>
   <%= link_to "Retouche" %>
+</div>
+
+<div id="navbar-portfolio" class="hidden-xs hidden-sm">
+  <%= link_to "Photos" %>
+  <%= link_to "Stop motion" %>
 </div>
 
 <div class="navbar hidden-md hidden-lg">
   <div class="dropdown">
     <i class="fa fa-bars dropdown-toggle" data-toggle="dropdown"></i><p>Menu</p>
     <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
-      <li><%= link_to "QUI SONT-ELLES ?", quisontelles_path %></li>
+      <li><%= link_to "EQUIPE", equipe_path %></li>
       <li><%= link_to "PRESTATIONS", prestations_path%></li>
       <li><%= link_to "PORTFOLIO", portfolio_path %></li>
       <li><%= link_to "STUDIO", studio_path %></li>

@@ -1,0 +1,50 @@
+.photo-presta {
+  width: 410px;
+  height: 410px;
+  border-radius: 50%;
+  box-shadow: 1px 2px 1px #a6a6a6;
+}
+
+.photo-presta-xs {
+  height: 350px;
+  width: 350px;
+  border-radius: 50%;
+  box-shadow: 1px 2px 1px #a6a6a6;
+}
+
+.content {
+  margin-top: 80px;
+  p {
+    font-size: 21px;
+  }
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.text-xs {
+  margin-top: 50px;
+  margin-bottom: 30px;
+}
+
+.text {
+  margin-left: 80px;
+}
+
+.photo-carre {
+  object-fit: cover;
+  width: 495px;
+  height: 370px;
+  box-shadow: 1px 2px 1px #a6a6a6;
+}
+
+.photo-carre-xs {
+  object-fit: cover;
+  width: 350px;
+  height: 280px;
+  box-shadow: 1px 2px 1px #a6a6a6;
+}
+
+

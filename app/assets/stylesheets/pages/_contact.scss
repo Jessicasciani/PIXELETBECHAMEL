@@ -6,5 +6,21 @@
 
 .contact {
   font-size: 25px;
-    margin-top: 250px;
+  margin-top: 250px;
+  a {
+    text-decoration:none;
+    color: $black;
+  }
+}
+
+.laura-contact {
+  margin:30px;
+}
+
+.maud-contact {
+  margin:30px;
+}
+
+.email {
+  color: #6e6e6e;
 }

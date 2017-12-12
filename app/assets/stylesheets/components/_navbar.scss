@@ -22,6 +22,39 @@
   align-items: center;
   justify-content: center;
   background-color: #464646;
+  padding-right: 190px;
+  height: 35px;
+  color: white;
+  a {
+    color: #464646;
+    transition: color 0.5s ease-in;
+    text-decoration: none;
+    margin-right: 25px;
+    font-size: 15px;
+    padding-right: 60px;
+    margin-bottom: 13px;
+  }
+  a:hover {
+    font-style: italic;
+    transition: font-style 1s ease-in;
+    }
+}
+
+.opacity {
+  a {color: white !important;
+    z-index: 2;
+  // transition: 1s ease-in;
+  }
+}
+
+#navbar-portfolio {
+  position: absolute;
+  top: 175px;
+  left: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #464646;
   height: 35px;
   color: white;
   a {
@@ -39,8 +72,9 @@
     }
 }
 
-.opacity {
+.opacity-port {
   a {color: white !important;
+    z-index: 2;
   // transition: 1s ease-in;
   }
 }
