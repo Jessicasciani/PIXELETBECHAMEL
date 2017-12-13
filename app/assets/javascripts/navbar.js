@@ -1,4 +1,4 @@
-const link = document.getElementById("prestations");
+var link = document.getElementById("prestations");
 console.log(link);
 
 link.addEventListener("mouseenter", function() {
@@ -6,21 +6,21 @@ link.addEventListener("mouseenter", function() {
   document.getElementById("navbar-portfolio").classList.remove("opacity-port");
 });
 
-const wrapper = document.getElementById("wrapper");
+var wrapper = document.getElementById("wrapper");
 
 wrapper.addEventListener("mouseleave", function() {
   document.getElementById("navbar-prestations").classList.remove("opacity");
   document.getElementById("navbar-portfolio").classList.remove("opacity-port");
 });
 
-const qui = document.getElementById("qui");
+var qui = document.getElementById("qui");
 console.log(qui);
 
 qui.addEventListener("mouseenter", function() {
   document.getElementById("navbar-prestations").classList.remove("opacity");
 });
 
-const portfolio = document.getElementById("portfolio");
+var portfolio = document.getElementById("portfolio");
 
 portfolio.addEventListener("mouseenter", function() {
   document.getElementById("navbar-prestations").classList.remove("opacity");
@@ -28,7 +28,7 @@ portfolio.addEventListener("mouseenter", function() {
 });
 
 
-const studio = document.getElementById("studio");
+var studio = document.getElementById("studio");
 
 studio.addEventListener("mouseenter", function() {
   document.getElementById("navbar-portfolio").classList.remove("opacity-port");
