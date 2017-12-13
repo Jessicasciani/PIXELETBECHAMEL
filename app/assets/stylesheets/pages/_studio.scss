@@ -1,6 +1,6 @@
 .box-prix {
     display: block;
-    margin: 26px auto;
+    margin: 35px auto;
     width: 270px;
     border: 1px dashed #D9D9DB;
     height: 75px;
@@ -10,10 +10,9 @@
 
 
 .photo-studio {
-  margin-top: 10px;
   object-fit: cover;
-  width: 575px;
-  height: 400px;
+  width: 700px;
+  height: 530px;
   box-shadow: 1px 2px 1px #a6a6a6;
 }
 
@@ -27,15 +26,13 @@
 }
 
 
-.right {
-  margin: 30px 0;
+.part-right {
   color: $black;
   font-family: Quicksand;
 }
 
-.left {
-  margin: 30px 20px;
-  margin-bottom: 60px;
+.part-left {
+  margin: 30px 55px;
 }
 
 .metro {
@@ -46,7 +43,7 @@
 }
 
 .adresse {
-  margin-top: 15px;
+  margin-top: 35px;
   color: #545353;
   line-height: 1em;
 }

@@ -1,0 +1,24 @@
+<div class="container">
+  <div class="row">
+  <% @portfolio_photos.each do |p| %>
+      <div class="col-xs-12 col-md-4">
+        <a class="lightbox" href="#photo_<%= p.id %>">
+          <%= cl_image_tag p.photo %>
+        </a>
+      </div>
+    <div class="lightbox-target" id="photo_<%= p.id %>">
+      <%= cl_image_tag p.photo %>
+      <a class="lightbox-close" href="#"></a>
+    </div>
+  <% end %>
+    </div>
+
+
+
+  <% if current_user&.admin  %>
+    <div class="form-cache">
+      <%= render 'portfolio_photos/form', portfolio_photo: @portfolio_photo %>
+      <%= link_to "Sign out", destroy_user_session_path, method: :delete %>
+    </div>
+  <% end %>
+</div>
