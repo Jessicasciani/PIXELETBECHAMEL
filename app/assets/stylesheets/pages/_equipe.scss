@@ -1,4 +1,7 @@
 .equipe-text {
+  margin-top: 30px;
+  padding:30px;
+  background: rgba(230,230,230,0.4);
   color: $black;
 }
 
@@ -13,11 +16,14 @@
 
 
 .flex-equipe {
+  padding: 30px;
+  background: rgba(230,230,230,0.4);
   color: $black;
   display: flex;
   align-items: center;
   justify-content: space-around;
   margin-bottom: 70px;
+  margin-top: 30px;
 }
 
 .photo-equipe-sm {
@@ -26,4 +32,13 @@
   object-fit: cover;
   border-radius: 50%;
   margin: 50px;
+}
+
+.photo-contact {
+  display: block;
+  margin: auto;
+  height: 250px;
+  width: 250px;
+  border-radius: 50%;
+  object-fit: cover;
 }
