@@ -1,9 +1,10 @@
 <div class="container">
   <div class="row">
   <% @portfolio_photos.each do |p| %>
-      <div class="col-xs-12 col-md-6">
+      <div class="col-xs-12 col-md-4">
         <a class="lightbox" href="#photo_<%= p.id %>">
           <%= cl_image_tag p.photo %>
+          <p class="client-name"><%= p.client %></p>
         </a>
         <% if current_user&.admin  %>
           <%= link_to portfolio_photo_path(p), method: :delete do %>

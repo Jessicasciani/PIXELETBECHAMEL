@@ -24,7 +24,7 @@ class PortfolioPhotosController < ApplicationController
 private
 
   def photo_params
-    params.require(:portfolio_photo).permit(:photo)
+    params.require(:portfolio_photo).permit(:photo, :client)
   end
 
 end
