@@ -5,7 +5,9 @@
         <div class="grosse-div">
           <a class="lightbox" href="#photo_<%= p.id %>">
             <%= cl_image_tag p.photo %>
-            <p class="client-name"><%= p.client %></p>
+            <div class="client-name">
+              <p><%= p.client %></p>
+            </div>
           </a>
           <% if current_user&.admin  %>
             <%= link_to portfolio_photo_path(p), method: :delete do %>
