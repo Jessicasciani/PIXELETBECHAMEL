@@ -1,0 +1,29 @@
+.equipe-text {
+  color: $black;
+}
+
+.photo-equipe {
+  height:300px;
+  width: 300px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 50px;
+  margin-top: 50px;
+}
+
+
+.flex-equipe {
+  color: $black;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-bottom: 70px;
+}
+
+.photo-equipe-sm {
+  height:200px;
+  width: 200px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin: 50px;
+}
