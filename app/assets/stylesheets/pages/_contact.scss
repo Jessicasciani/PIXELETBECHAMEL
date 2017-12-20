@@ -6,22 +6,19 @@
 
 .contact {
   font-size: 25px;
-  margin-top: 30px;
   a {
     text-decoration:none;
     color: $black;
   }
 }
 
-.laura-contact {
-  margin:30px;
-}
-
-.maud-contact {
-  margin:30px;
-  padding-bottom: 10px;
-}
 
 .email {
   color: #6e6e6e;
+}
+
+.full-container {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  min-height: calc(100vh - 210px);
 }
