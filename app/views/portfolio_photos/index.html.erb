@@ -1,10 +1,15 @@
 <div class="container">
   <div class="row">
   <% @portfolio_photos.each do |p| %>
-      <div class="col-xs-12 col-md-4">
+      <div class="col-xs-12 col-md-6">
         <a class="lightbox" href="#photo_<%= p.id %>">
           <%= cl_image_tag p.photo %>
         </a>
+        <% if current_user&.admin  %>
+          <%= link_to portfolio_photo_path(p), method: :delete do %>
+            <i class="fa fa-trash-o" aria-hidden="true"></i>
+          <% end %>
+        <% end %>
       </div>
     <div class="lightbox-target" id="photo_<%= p.id %>">
       <%= cl_image_tag p.photo %>

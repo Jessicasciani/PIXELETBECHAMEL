@@ -3,65 +3,229 @@
 <head>
   <title>The page you were looking for doesn't exist (404)</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <style>
-  .rails-default-error-page {
-    background-color: #EFEFEF;
-    color: #2E2F30;
-    text-align: center;
-    font-family: arial, sans-serif;
-    margin: 0;
-  }
-
-  .rails-default-error-page div.dialog {
-    width: 95%;
-    max-width: 33em;
-    margin: 4em auto 0;
-  }
-
-  .rails-default-error-page div.dialog > div {
-    border: 1px solid #CCC;
-    border-right-color: #999;
-    border-left-color: #999;
-    border-bottom-color: #BBB;
-    border-top: #B00100 solid 4px;
-    border-top-left-radius: 9px;
-    border-top-right-radius: 9px;
-    background-color: white;
-    padding: 7px 12% 0;
-    box-shadow: 0 3px 8px rgba(50, 50, 50, 0.17);
-  }
-
-  .rails-default-error-page h1 {
-    font-size: 100%;
-    color: #730E15;
-    line-height: 1.5em;
-  }
-
-  .rails-default-error-page div.dialog > p {
-    margin: 0 0 1em;
-    padding: 1em;
-    background-color: #F7F7F7;
-    border: 1px solid #CCC;
-    border-right-color: #999;
-    border-left-color: #999;
-    border-bottom-color: #999;
-    border-bottom-left-radius: 4px;
-    border-bottom-right-radius: 4px;
-    border-top-color: #DADADA;
-    color: #666;
-    box-shadow: 0 3px 8px rgba(50, 50, 50, 0.17);
-  }
-  </style>
 </head>
 
-<body class="rails-default-error-page">
-  <!-- This file lives in public/404.html -->
-  <div class="dialog">
-    <div>
-      <h1>The page you were looking for doesn't exist.</h1>
-      <p>You may have mistyped the address or the page may have moved.</p>
+<body class="error-page" style="background-image: linear-gradient(rgba(50,50,50,0.6), rgba(50,50,50,0.4)),url('https://static.pexels.com/photos/207529/pexels-photo-207529.jpeg')">
+
+    <div class="dialog">
+
+      <div class="wrapper">
+        <div class="number">
+          <div class="line hori top"></div>
+          <div class="line vert top left"></div>
+          <div class="active line vert top right"></div>
+          <div class="line hori middle"></div>
+          <div class="line vert bottom left"></div>
+          <div class="active line vert bottom right"></div>
+          <div class="line hori bottom"></div>
+        </div>
+        <div class="number">
+          <div class="line hori top"></div>
+          <div class="active line vert top left"></div>
+          <div class="active line vert top right"></div>
+          <div class="active line hori middle"></div>
+          <div class="line vert bottom left"></div>
+          <div class="active line vert bottom right"></div>
+          <div class="line hori bottom"></div>
+        </div>
+        <div class="dot"></div>
+        <div class="number">
+          <div class="active line hori top"></div>
+          <div class="active line vert top left"></div>
+          <div class="active line vert top right"></div>
+          <div class="line hori middle"></div>
+          <div class="active line vert bottom left"></div>
+          <div class="active line vert bottom right"></div>
+          <div class="active line hori bottom"></div>
+        </div>
+        <div class="number">
+          <div class="active line hori top"></div>
+          <div class="line vert top left"></div>
+          <div class="active line vert top right"></div>
+          <div class="active line hori middle"></div>
+          <div class="line vert bottom left"></div>
+          <div class="active line vert bottom right"></div>
+          <div class="active line hori bottom"></div>
+        </div>
+      </div>
+      <h1>404 NOT FOUND</h1>
+      <h2>Lost in time...</h2>
+      <p>The page you were looking for doesn't exist.</p>
+      <p>If you are the application owner check the logs for more information.</p>
+      <a class="btn-back" href="http://www.estory.io">Travel back</a>
     </div>
-    <p>If you are the application owner check the logs for more information.</p>
-  </div>
 </body>
+
+<style>
+
+.error-page {
+  background-size: cover;
+  color: white;
+  margin: 100px;
+  height:100vh;
+}
+
+
+.btn-back {
+  background-color: #619D91;
+  padding: 12px;
+  font-size: 20px;
+  color: white;
+  font-weight: bold;
+  border-radius: 4px;
+  text-decoration:none;
+  margin-top: 10px;
+}
+
+.dialog {
+  display: flex;
+  flex-direction:column;
+  align-items: center;
+}
+
+
+.wrapper {
+  width:390px;
+  margin:50px auto;
+}
+.number {
+  margin-right:40px;
+  float:left;
+}
+.dot {
+  margin:0;
+  float:left;
+  height:100px;
+  width:10px;
+  position:relative;
+  left:-5px;
+}
+.dot:before, .dot:after {
+  content:"";
+  display:block;
+  width:10px;
+  height:10px;
+  background:rgba(255,255,255,0.9);
+  position:relative;
+  border-radius:50%;
+  left:-15px;
+  box-shadow: 5px 10px 20px 0 rgba(0,0,0,0.5);
+}
+.dot:before {
+  top:20px;
+}
+.dot:after {
+  top:50px;
+}
+.line {
+  width: 50px;
+  height:10px;
+  background: rgba(0,0,0,0.3);
+  position:relative;
+}
+.line:before {
+  content:"";
+  display:block;
+  width:0;
+  height:0;
+  border-top:5px solid rgba(0,0,0,0);
+  border-bottom:5px solid rgba(0,0,0,0);
+  border-right:6px solid rgba(0,0,0,0.3);
+  position:relative;
+  left:-6px;
+}
+.line:after {
+  content:"";
+  display:block;
+  width:0;
+  height:0;
+  border-top:5px solid rgba(0,0,0,0);
+  border-bottom:5px solid rgba(0,0,0,0);
+  border-left:6px solid rgba(0,0,0,0.3);
+  position:relative;
+  float:right;
+  left:6px;
+  top:-10px;
+}
+.active {
+  background:rgba(255,255,255,0.9);
+  box-shadow: 5px 10px 20px 0 rgba(0,0,0,0.5);
+}
+.vert.active {
+  box-shadow: -10px 5px 20px 0 rgba(0,0,0,0.5);
+}
+.active:before {
+  border-right:6px solid rgba(255,255,255,0.9);
+}
+.active:after {
+  border-left:6px solid rgba(255,255,255,0.9);
+}
+.hori {
+  transform:rotate(0deg);
+  animation:horiz 899ms linear infinite;
+}
+.vert {
+  transform:rotate(-90deg);
+  animation:verti 926ms linear infinite;
+}
+.hori.top {
+  top:-23px;
+}
+.vert.left {
+  left:-31px;
+}
+.vert.right {
+  left:31px;
+  top:-10px;
+}
+.middle {
+  top:12px;
+}
+.bottom.left {
+  top:35px;
+}
+.hori.bottom {
+  top:47px;
+}
+.bottom.right {
+  top:25px;
+}
+@keyframes verti {
+  0% {transform:rotate(-90deg);filter:none;}
+
+  19% {transform:rotate(-90deg);filter:none;}
+  20% {transform:rotate(0deg);filter:blur(5px);}
+  21% {transform:rotate(-90deg);filter:none;}
+  23% {transform:rotate(0deg);filter:blur(5px);}
+  24% {transform:rotate(-90deg);filter:none;}
+
+  90% {transform:rotate(-90deg);filter:none;}
+  91% {transform:rotate(0deg);filter:blur(5px);}
+  92% {transform:rotate(-90deg);filter:none;}
+  100% {transform:rotate(-90deg);filter:none;}
+}
+
+@keyframes horiz {
+  0% {transform:rotate(0deg);filter:none;}
+
+  29% {transform:rotate(0deg);filter:none;}
+  30% {transform:rotate(90deg);filter:invert(1);}
+  31% {transform:rotate(0deg);filter:none;}
+  33% {transform:rotate(90deg);filter:invert(1);}
+  34% {transform:rotate(0deg);filter:none;}
+
+  50% {transform:rotate(0deg);filter:none;}
+  51% {transform:rotate(90deg);filter:invert(1);}
+  52% {transform:rotate(0deg);filter:none;}
+
+  70% {transform:rotate(0deg);filter:none;}
+  71% {transform:rotate(-90deg);filter:invert(1);}
+  72% {transform:rotate(0deg);filter:none;}
+  100% {transform:rotate(0deg);filter:none;}
+}
+/* just a note, the animation will "line up" like it was at the start, every 832474ms, thats every 13.8745666667 minutes - thats the LCM */
+</style>
+
+
 </html>
+
