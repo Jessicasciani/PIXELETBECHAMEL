@@ -11,7 +11,6 @@ gem 'devise'
 gem 'figaro'
 gem 'cloudinary'
 gem 'carrierwave', '~> 1.2'
-gem 'carrierwave-video'
 
 
 
