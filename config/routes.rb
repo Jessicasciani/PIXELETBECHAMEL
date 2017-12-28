@@ -8,9 +8,11 @@ Rails.application.routes.draw do
   get '/contact', to: 'pages#contact'
   get 'prestations/recettes', to: 'pages#recettes'
   get 'prestations/produits', to: 'pages#produits'
-  get 'prestations/stopmotion', to: 'pages#stopmotion'
+  get 'prestations/stopmotions', to: 'pages#stopmotion'
   get 'prestations/pack', to: 'pages#packnav'
   resources :portfolio_photos
+  resources :portfolio_motions
+
   # post '/portfolio_photos', to: 'portfolio_photos#create'
   # delete '/portfolio_photos/:id', to: 'portfolio_photos#destroy'
   # get '/portfolio_photos', to: 'pages#portfolio_photo'

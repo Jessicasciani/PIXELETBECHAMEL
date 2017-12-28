@@ -1,1 +1,36 @@
-<h1 class="text-center">PAGE EN CONSTRUCTION</h1>
+<div class="container">
+
+  <div class="row">
+    <div class="col-xs-12 col-md-4 col-md-offset-2">
+      <div class="card-presta" style="background-image: linear-gradient(rgba(255, 193, 7, 0.7), rgba(255, 193, 7, 0.7)), url(<%= image_path 'cappucino.png' %>)">
+        <h2>PRISES DE VUE</h2>
+        <h2><strong>DE VOS RECETTES</strong></h2>
+        <%= link_to "", prestations_recettes_path, class: "link-prestas" %>
+      </div>
+    </div>
+
+    <div class="col-xs-12 col-md-4">
+      <div class="card-presta" style="background-image: linear-gradient(rgba(76, 175, 85, 0.7), rgba(76, 175, 85, 0.7)), url(<%= image_path 'pixetbech21.jpg' %>)">
+        <h2>PRISES DE VUE</h2>
+        <h2><strong>DE VOS PRODUITS</strong></h2>
+        <%= link_to "", prestations_produits_path, class: "link-prestas" %>
+      </div>
+    </div>
+
+    <div class="col-xs-12 col-md-4 col-md-offset-2">
+      <div class="card-presta" style="background-image: linear-gradient(rgba(234, 185, 231, 0.8), rgba(234, 185, 231, 0.8)), url(<%= image_path 'pixetbech19.jpg' %>)">
+        <h2>PRISES DE VUE</h2>
+        <h2><strong>DE VOS PACKAGINGS</strong></h2>
+        <%= link_to "", prestations_pack_path, class: "link-prestas" %>
+      </div>
+    </div>
+
+    <div class="col-xs-12 col-md-4">
+      <div class="card-presta" style="background-image: linear-gradient(rgba(163, 13, 4, 0.7), rgba(163, 13, 4, 0.7)), url(<%= image_path 'pixetbech14.jpg' %>)">
+        <h2>CREATIONS ORIGINALES</h2>
+        <h2><strong>DE STOP-MOTIONS</strong></h2>
+        <%= link_to "", prestations_stopmotion_path, class: "link-prestas" %>
+      </div>
+    </div>
+
+</div>

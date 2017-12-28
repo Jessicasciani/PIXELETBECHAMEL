@@ -1,0 +1,17 @@
+<div class="container">
+  <div class="row">
+  <% @portfolio_motions.each do |p| %>
+  <%= cl_video_tag p.video.to_s, :size => "320x240", :controls => true %>
+  <% end %>
+</div>
+
+
+
+  <% if current_user&.admin  %>
+    <div class="form-cache">
+      <%= render 'portfolio_motions/form', portfolio_motion: @portfolio_motion %>
+      <%= link_to "Sign out", destroy_user_session_path, method: :delete %>
+    </div>
+  <% end %>
+</div>
+
