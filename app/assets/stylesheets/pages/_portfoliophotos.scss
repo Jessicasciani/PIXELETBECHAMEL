@@ -1,3 +1,48 @@
+
+.card-port {
+  position: relative;
+   &:hover{
+  cursor: pointer;
+  transition: ease 1s;
+    .titre-port {
+    color: white;
+    transition: ease 1s;
+    }
+    .carre {
+    background-color:rgba(40,40,40,0.5);
+    width: 105%;
+    height: calc(100vh - 210px);
+    transition: ease 1s;
+    }
+  }
+}
+
+.carre {
+  background-color:rgba(40,40,40,0);
+  position: absolute;
+  top: 0;
+  right: 0;
+  left:0;
+  color: rgba(0,0,0,0);
+}
+
+.titre-port {
+  position: absolute;
+  top: 230px;
+  left: 36%;
+  width: 195px;
+  color: rgba(0,0,0,0);
+  font-family: Quicksand;
+  font-size: 30px;
+  z-index:2;
+  line-height: 1.5em;
+}
+
+.photo-portfo {
+  height: calc(100vh - 210px);
+  width: 105%;
+}
+
 .grosse-div{
   height: 300px;
 }
