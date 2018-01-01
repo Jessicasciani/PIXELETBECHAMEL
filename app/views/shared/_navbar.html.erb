@@ -20,13 +20,13 @@
 
 <div class="navbar hidden-md hidden-lg">
   <div class="dropdown">
-    <i class="fa fa-bars dropdown-toggle" data-toggle="dropdown"></i><p>Menu</p>
+    <i class="fa fa-bars dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></i><p>Menu</p>
     <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
-      <li><%= link_to "EQUIPE", equipe_path %></li>
-      <li><%= link_to "PRESTATIONS", prestations_path%></li>
-      <li><%= link_to "PORTFOLIO", portfolio_path %></li>
-      <li><%= link_to "STUDIO", studio_path %></li>
-      <li><%= link_to "CONTACT", contact_path %></li>
+      <li class="dropdown-item" ><%= link_to "EQUIPE", equipe_path %></li>
+      <li class="dropdown-item" ><%= link_to "PRESTATIONS", prestations_path%></li>
+      <li class="dropdown-item" ><%= link_to "PORTFOLIO", portfolio_path %></li>
+      <li class="dropdown-item" ><%= link_to "STUDIO", studio_path %></li>
+      <li class="dropdown-item" ><%= link_to "CONTACT", contact_path %></li>
     </ul>
   </div>
 </div>
