@@ -20,8 +20,10 @@
 
 <div class="navbar hidden-md hidden-lg">
   <div class="dropdown">
-    <i class="fa fa-bars dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></i><p>Menu</p>
-    <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
+    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Menu
+    </button>
+    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
       <li class="dropdown-item" ><%= link_to "EQUIPE", equipe_path %></li>
       <li class="dropdown-item" ><%= link_to "PRESTATIONS", prestations_path%></li>
       <li class="dropdown-item" ><%= link_to "PORTFOLIO", portfolio_path %></li>
