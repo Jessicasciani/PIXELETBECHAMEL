@@ -18,14 +18,17 @@
   <%= link_to "Stop motion", portfolio_motions_path %>
 </div>
 
-<div class="navbar hidden-md hidden-lg selection">
-    <select>
-      <option value="equipe"><%= link_to "EQUIPE", equipe_path %></option>
-      <option value="prestations"><%= link_to "PRESTATIONS", prestations_path%></option>
-      <option value="portfolio"><%= link_to "PORTFOLIO", portfolio_path %></option>
-      <option value="studio"><%= link_to "STUDIO", studio_path %></option>
-      <option value="contact"><%= link_to "CONTACT", contact_path %></option>
-    </select>
+<div class="navbar hidden-md hidden-lg">
+  <div class="dropdown">
+    <i class="fa fa-bars dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></i><p>Menu</p>
+    <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
+      <li class="dropdown-item" ><%= link_to "EQUIPE", equipe_path %></li>
+      <li class="dropdown-item" ><%= link_to "PRESTATIONS", prestations_path%></li>
+      <li class="dropdown-item" ><%= link_to "PORTFOLIO", portfolio_path %></li>
+      <li class="dropdown-item" ><%= link_to "STUDIO", studio_path %></li>
+      <li class="dropdown-item" ><%= link_to "CONTACT", contact_path %></li>
+    </ul>
+  </div>
 </div>
 
 
