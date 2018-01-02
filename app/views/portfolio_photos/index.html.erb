@@ -3,12 +3,14 @@
   <% @portfolio_photos.each do |p| %>
       <div class="col-xs-12 col-md-4">
         <div class="grosse-div">
-          <a class="lightbox" href="#photo_<%= p.id %>">
-            <%= cl_image_tag p.photo %>
-            <div class="client-name">
-              <p><%= p.client %></p>
-            </div>
-          </a>
+          <div class="photo-light">
+            <a class="lightbox" href="#photo_<%= p.id %>">
+              <%= cl_image_tag p.photo %>
+              <div class="client-name">
+                <p><%= p.client %></p>
+              </div>
+            </a>
+          </div>
           <% if current_user&.admin  %>
             <%= link_to portfolio_photo_path(p), method: :delete do %>
               <i class="fa fa-trash-o" aria-hidden="true"></i>
@@ -21,7 +23,7 @@
       <a class="lightbox-close" href="#"></a>
     </div>
   <% end %>
-    </div>
+</div>
 
 
 
@@ -33,3 +35,13 @@
     </div>
   <% end %>
 </div>
+
+<!--
+
+<div class="lightbox" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="lightbox-loader"></div>
+  <div class="lightbox-content"></div>
+  <button class="lightbox-previous">&#8249;</button>
+  <button class="lightbox-next">&#8250;</button>
+</div>
+ -->

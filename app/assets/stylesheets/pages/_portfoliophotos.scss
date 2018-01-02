@@ -45,70 +45,62 @@
   object-fit: cover;
 }
 
-.grosse-div {
-  overflow: hidden;
-  position: relative;
-  width: 325px;
-  height: 250px;
-  img {
-    max-width: 100%;
-    object-fit: cover;
-    -moz-transition: all 0.3s;
-    -webkit-transition: all 0.3s;
-    transition: all 0.3s;
-    border: 3px solid white;
-    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
-    margin: 50px 20px 20px 25px;
-  }
-}
-
-
-.grosse-div:hover {
-  .client-name {
-  -moz-transform: scale(1.1);
-  -webkit-transform: scale(1.1);
-  transform: scale(1.1);
-  }
-  img {
-  -moz-transform: scale(1.1);
-  -webkit-transform: scale(1.1);
-  transform: scale(1.1);
-  }
-}
 
 .fa-trash-o {
   position: absolute;
-  bottom: 100px;
+  bottom: 30px;
+  right: 0;
 }
+
+
 .client-name {
   padding-top: 4px;
   background-color: rgba(50,50,50, 0.7);
   position: absolute;
-  left: 28px;
-  width: 319px;
+  width:100%;
   height: 35px;
-  top: 80px;
+  top: 175px;
   text-align: center;
   color: white;
-  -moz-transition: all 0.3s;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
 }
 
-// .lightbox {
-//   position: relative;
-//   img {
-//   -moz-transition: all 0.3s;
-//   -webkit-transition: all 0.3s;
-//   transition: all 0.3s;
-//   height: 250px;
-//   width: 325px;
-//   border: 3px solid white;
-//   box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
-//   margin: 50px 20px 20px 25px;
-//   object-fit: cover;
-//   }
-// }
+.photo-light {
+  width: 325px;
+  margin-top: 19px;
+  height: 250px;
+  position: relative;
+  overflow: hidden;
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    -moz-transition: all 0.3s;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+  }
+}
+
+.grosse-div {
+    position: relative;
+}
+
+.photo-light:hover {
+  img {
+  -moz-transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+  }
+}
+
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 
 /* Styles the lightbox, removes it from sight and adds the fade-in transition */
 
@@ -140,9 +132,6 @@ max-width: 0%;
 border: 3px solid white;
 box-shadow: 0px 0px 8px rgba(0,0,0,.3);
 box-sizing: border-box;
--moz-transition: all 0.3s;
--webkit-transition: all 0.3s;
-transition: all 0.3s;
 }
 
 /* Styles the close link, adds the slide down transition */
@@ -222,3 +211,6 @@ top: 0px;
   margin-top: 50px;
   margin-bottom: 25px;
 }
+
+
+
