@@ -2,14 +2,14 @@
   display:flex;
   align-items: center;
   justify-content: space-around;
-  background-color: #464646;
+  background-color: white;
   height: 125px;
   h1 {
     font-weight: 400;
-    color: white;
+    color: $black;
   }
   p {
-    color: #464646;
+    color: white;
   }
 }
 
