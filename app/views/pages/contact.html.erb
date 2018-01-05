@@ -1,21 +1,25 @@
   <div class="full-container" style="background-image: url('http://bgfons.com/uploads/stucco/stucco_texture2042.jpg')">
     <div class="contact">
     <%= image_tag "Maud_Laura.jpg", class: "photo-contact" %>
-    <div class="row">
-      <div class="col-xs-12 col-md-6">
-        <div class="maud-contact text-center">
-          <p>Maud ARGAÏBI</p>
-          <p>06 26 74 48 15</p>
-          <p class="email"><%= mail_to "maud.a@pixeletbechamel.com" %></p>
+      <div class="row">
+        <div class="col-xs-12 col-md-6">
+          <div class="maud-contact text-center">
+            <p>Maud ARGAÏBI</p>
+            <p>06 26 74 48 15</p>
+            <p class="email"><strong><%= mail_to "maud.a@pixeletbechamel.com" %></strong></p>
+          </div>
+        </div>
+        <div class="col-xs-12 col-md-6">
+          <div class="laura-contact text-center">
+            <p>Laura BREGEON</p>
+            <p>06 18 03 27 55</p>
+            <p class="email"><strong><%= mail_to "laura.b@pixeletbechamel.com" %></strong></p>
+          </div>
         </div>
       </div>
-      <div class="col-xs-12 col-md-6">
-        <div class="laura-contact text-center">
-          <p>Laura BREGEON</p>
-          <p>06 18 03 27 55</p>
-          <p class="email"><%= mail_to "laura.b@pixeletbechamel.com" %></p>
-        </div>
+      <div class="margin">
+        <p class="text-center"><strong><%= mail_to "studio@pixeletbechamel.com" %></strong></p>
+        <p class="text-center">01 40 38 00 75</p>
       </div>
     </div>
   </div>
-</div>
