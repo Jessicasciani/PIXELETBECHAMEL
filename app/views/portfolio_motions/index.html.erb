@@ -1,11 +1,12 @@
 <div class="container">
   <div class="row">
-    <div class="col-xs-12 col-md-4">
-      <% @portfolio_motions.each do |p| %>
-      <%= cl_video_tag p.video.to_s, :size => "320x240", :controls => true %>
-      <% end %>
-    </div>
+    <% @portfolio_motions.each do |p| %>
+      <div class="col-xs-12 col-md-4">
+        <%= cl_video_tag p.video.to_s, :size => "320x240", :controls => true %>
+      </div>
+    <% end %>
   </div>
+
 
 
   <% if current_user&.admin  %>
