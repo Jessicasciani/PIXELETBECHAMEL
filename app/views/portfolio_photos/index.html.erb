@@ -1,30 +1,23 @@
 <div class="container">
   <div class="row">
-  <% @portfolio_photos.each do |p| %>
-      <div class="col-xs-12 col-md-4">
-        <div class="grosse-div">
-          <div class="photo-light">
-            <a class="lightbox" href="#photo_<%= p.id %>">
-              <%= cl_image_tag p.photo %>
+    <div id="thumbs">
+      <% @portfolio_photos.each do |p| %>
+        <div class="col-xs-12 col-md-4">
+            <a href="<%= cl_image_path p.photo %>" style="background-image:url(<%= cl_image_path p.photo %>)">
               <div class="client-name">
                 <p><%= p.client %></p>
               </div>
             </a>
-          </div>
-          <% if current_user&.admin  %>
-            <%= link_to portfolio_photo_path(p), method: :delete do %>
-              <i class="fa fa-trash-o" aria-hidden="true"></i>
+            <% if current_user&.admin  %>
+              <%= link_to portfolio_photo_path(p), method: :delete do %>
+                <i class="fa fa-trash-o" aria-hidden="true"></i>
+              <% end %>
             <% end %>
-          <% end %>
         </div>
-      </div>
-    <div class="lightbox-target" id="photo_<%= p.id %>">
-      <%= cl_image_tag p.photo %>
-      <a class="lightbox-close" href="#"></a>
+      <% end %>
     </div>
-  <% end %>
+  </div>
 </div>
-
 
 
 
@@ -36,6 +29,12 @@
   <% end %>
 </div>
 
+<script>
+
+    // Initialize the gallery
+    $('#thumbs a').touchTouch();
+
+</script>
 <!--
 
 <div class="lightbox" tabindex="-1" role="dialog" aria-hidden="true">
@@ -45,5 +44,3 @@
   <button class="lightbox-next">&#8250;</button>
 </div>
  -->
-
-

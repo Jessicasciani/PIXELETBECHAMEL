@@ -21,6 +21,9 @@ gem 'sass-rails'
 gem 'simple_form'
 gem 'uglifier'
 gem 'photoswipe-rails'
+gem 'rails-gallery'
+
+
 
 
 group :development do
