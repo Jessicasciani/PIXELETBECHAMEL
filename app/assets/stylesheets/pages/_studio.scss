@@ -1,3 +1,8 @@
+.studio {
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
 .box-prix {
     display: block;
     margin: 35px auto;
@@ -8,11 +13,8 @@
     text-align: center;
 }
 
-
-.photo-studio {
-  object-fit: cover;
-  width: 700px;
-  height: 530px;
+.studio-photo {
+  object-fit: fill;
 }
 
 .photo-studio-xs {
@@ -28,10 +30,12 @@
 .part-right {
   color: $black;
   font-family: Open Sans;
+  width: 100%;
 }
 
 .part-left {
   margin: 30px 55px;
+  width: 70%;
 }
 
 .metro {
@@ -45,4 +49,33 @@
   margin-top: 35px;
   color: #545353;
   line-height: 1em;
+}
+
+.bis {
+  height: 65vh;
+}
+
+#myCarouselbis {
+  height: 65vh;
+  margin-left: 5%;
+  margin-bottom: 5%;
+   img {
+    height: 65vh;
+  }
+}
+
+#myCarouselxs {
+  height: 200px;
+}
+
+.carousel-indicators .xs {
+    bottom: -153px;
+}
+
+.glyphicon.glyphicon-chevron-left.lefti {
+    margin-left: -30%;
+}
+
+.glyphicon.glyphicon-chevron-right.righti {
+    margin-right: -30%;
 }

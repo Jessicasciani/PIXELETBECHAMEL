@@ -1,6 +1,44 @@
   <div class="studio flex hidden-xs hidden-sm">
     <div class="part-right">
-      <%= image_tag 'studio19.jpg', class: "photo-studio" %>
+      <div id="myCarouselbis" class="carousel slide carousel-fade" data-ride="carousel">
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+          <li data-target="#myCarouselbis" data-slide-to="0" class="active"></li>
+          <li data-target="#myCarouselbis" data-slide-to="1"></li>
+          <li data-target="#myCarouselbis" data-slide-to="2"></li>
+          <li data-target="#myCarouselbis" data-slide-to="3"></li>
+        </ol>
+
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner bis">
+          <div class="item active">
+            <%= image_tag 'studio1.png', class: "studio-photo"  %>
+          </div>
+
+          <div class="item">
+            <%= image_tag 'studio19.jpg' %>
+          </div>
+
+          <div class="item">
+            <%= image_tag 'studio4.jpg', class: "studio-photo"%>
+          </div>
+
+          <div class="item">
+            <%= image_tag 'studio10.jpg', class: "studio-photo" %>
+          </div>
+
+        </div>
+
+        <a class="left carousel-control" href="#myCarouselbis" data-slide="prev">
+          <span class="glyphicon glyphicon-chevron-left lefti" id="lefti"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="right carousel-control" href="#myCarouselbis" data-slide="next">
+          <span class="glyphicon glyphicon-chevron-right righti"></span>
+          <span class="sr-only">Next</span>
+        </a>
+
+      </div>
     </div>
     <div class="part-left">
       <div class="text-studio">
@@ -35,7 +73,3 @@
     </div>
       <p>Parking disponible</p>
   </div>
-
-
-
-

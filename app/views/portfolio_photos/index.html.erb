@@ -1,7 +1,7 @@
 <div class="container">
   <div class="row">
     <div id="thumbs">
-      <% @portfolio_photos.each do |p| %>
+      <% @portfolio_photos.reverse.each do |p| %>
         <div class="col-xs-12 col-md-4">
           <div class="outer">
             <a class="inner" href="<%= cl_image_path p.photo %>" style="background-image:url(<%= cl_image_path p.photo %>)"></a>

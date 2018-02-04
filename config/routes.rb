@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   devise_for :users
-  root to: 'pages#home'
+  root to: 'photo_homes#index'
   get '/equipe', to: 'pages#equipe'
   get '/prestations', to: 'pages#prestations'
   get '/portfolio', to: 'pages#portfolio'
@@ -12,7 +12,7 @@ Rails.application.routes.draw do
   get 'prestations/pack', to: 'pages#packnav'
   resources :portfolio_photos
   resources :portfolio_motions
-
+  resources :photo_homes
   # post '/portfolio_photos', to: 'portfolio_photos#create'
   # delete '/portfolio_photos/:id', to: 'portfolio_photos#destroy'
   # get '/portfolio_photos', to: 'pages#portfolio_photo'
