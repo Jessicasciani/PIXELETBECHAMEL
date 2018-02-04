@@ -1,7 +1,7 @@
 class PhotoHomesController < ApplicationController
 
   def index
-    @photo_homes = PhotoHome.all
+    @photo_homes = PhotoHome.all.sort_by{ |t| t.id }
     @photo_home = PhotoHome.new
   end
 
