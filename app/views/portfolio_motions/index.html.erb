@@ -2,7 +2,9 @@
   <div class="row">
     <% @portfolio_motions.each do |p| %>
       <div class="col-xs-12 col-md-4">
-        <%= cl_video_tag p.video.to_s, :size => "320x240", :controls => true %>
+        <% var = p.video.to_s.split("mp4") %>
+        <% new_var = var.first << "jpg" %>
+        <%= cl_video_tag (p.video.to_s), :size => "320x240", :controls => true, :poster => new_var %>
       </div>
     <% end %>
   </div>
