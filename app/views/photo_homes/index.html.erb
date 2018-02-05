@@ -4,10 +4,9 @@
 
 
     <ol class="carousel-indicators">
-      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-      <li data-target="#myCarousel" data-slide-to="1"></li>
-      <li data-target="#myCarousel" data-slide-to="2"></li>
-      <li data-target="#myCarousel" data-slide-to="3"></li>
+      <% @photo_homes.each_with_index do |photo, index| %>
+        <li data-target="#myCarousel" data-slide-to="<%= index %>" class="<%= 'active' if index == 0 %>"></li>
+      <% end %>
     </ol>
 
   <!-- Wrapper for slides -->
@@ -41,9 +40,9 @@
         <%= link_to "Sign out", destroy_user_session_path, method: :delete %>
       </div>
     </div>
-      <% @photo_homes.each do |photo_home| %>
+      <% @photo_homes.each_with_index do |photo_home, index| %>
         <div class="col-xs-12 col-md-2">
-          <p>Modifier</p>
+          <p>Modifier photo <%= index + 1%></p>
           <div class="form-home">
             <%= render 'photo_homes/form', photo_home: photo_home, method: :patch%>
           </div>
