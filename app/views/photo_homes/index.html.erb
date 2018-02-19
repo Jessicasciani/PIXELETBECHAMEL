@@ -60,13 +60,22 @@
   </div>
 
     <div class="article flex">
-      <%= cl_image_tag @articles.last.photo %>
-      <div class="article-text">
-        <h2 class="title-article"><%= @articles.last.title %></h2>
-        <p><%= @articles.last.created_at.strftime("%b %d, %Y") %></p>
-        <p><%= @articles.last.text %></p>
-        <p> <%= link_to "Plus d'articles...", articles_path  %></p>
-      </div>
+      <% if @articles.last.photo? %>
+        <%= cl_image_tag @articles.last.photo %>
+        <div class="article-text">
+          <h2 class="title-article"><%= @articles.last.title %></h2>
+          <p><%= @articles.last.created_at.strftime("%b %d, %Y") %></p>
+          <p><%= @articles.last.text %></p>
+          <p> <%= link_to "Plus d'articles...", articles_path  %></p>
+        </div>
+      <% else %>
+        <div class="article-text">
+          <h2 class="title-article"><%= @articles.last.title %></h2>
+          <p><%= @articles.last.created_at.strftime("%b %d, %Y") %></p>
+          <p><%= @articles.last.text %></p>
+          <p> <%= link_to "Plus d'articles...", articles_path  %></p>
+        </div>
+      <% end %>
     </div>
 
        <p class="contact-btn"><%= link_to "Contactez-nous", contact_path %></p>
