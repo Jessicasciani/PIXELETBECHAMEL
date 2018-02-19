@@ -3,6 +3,7 @@ class PhotoHomesController < ApplicationController
   def index
     @photo_homes = PhotoHome.all.sort_by{ |t| t.id }
     @photo_home = PhotoHome.new
+    @articles = Article.all
   end
 
   def new

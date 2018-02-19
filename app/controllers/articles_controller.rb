@@ -24,7 +24,7 @@ class ArticlesController < ApplicationController
 private
 
   def article_params
-    params.require(:article).permit(:photo, :text)
+    params.require(:article).permit(:photo, :title, :text)
   end
 
 end

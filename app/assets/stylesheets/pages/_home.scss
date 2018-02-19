@@ -47,5 +47,26 @@ body {
     margin-right: 80px;
   }
   margin: 50px;
+}
 
+.contact-btn {
+  height: 60px;
+  width: 200px;
+  background-color: grey;
+  border-radius: 5px;
+  padding:  15px 10px;
+  text-align: center;
+  a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+  }
+}
+
+.carousel-control.left {
+  background-image: none;
+}
+
+.carousel-control.right {
+  background-image: none;
 }
