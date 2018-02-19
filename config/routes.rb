@@ -13,6 +13,7 @@ Rails.application.routes.draw do
   resources :portfolio_photos
   resources :portfolio_motions
   resources :photo_homes
+  resources :articles
   # post '/portfolio_photos', to: 'portfolio_photos#create'
   # delete '/portfolio_photos/:id', to: 'portfolio_photos#destroy'
   # get '/portfolio_photos', to: 'pages#portfolio_photo'

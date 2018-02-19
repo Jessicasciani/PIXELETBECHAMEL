@@ -1,0 +1,7 @@
+<%= simple_form_for(article) do |f| %>
+  <%= f.input :text, class: "form-control" %>
+  <%= f.input :photo, class: "form-control" %>
+  <%= f.input :photo_cache, as: :hidden %>
+  <%= f.submit 'Ajouter un article', class: "abtn abtn-lg btn-primary" %>
+<% end %>
+
