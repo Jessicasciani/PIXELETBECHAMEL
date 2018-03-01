@@ -47,6 +47,9 @@ body {
     margin-right: 80px;
   }
   margin: 50px;
+  p {
+    margin-top: 25%;
+  }
 }
 
 .contact-btn {
@@ -62,6 +65,9 @@ body {
     text-decoration: none;
     font-weight: bold;
   }
+  &:hover {
+    background-color: #9f9d9d;
+  }
 }
 
 .carousel-control.left {
@@ -73,10 +79,11 @@ body {
 }
 
 #mc_embed_signup {
-  margin: 10px;
+  margin: 25px 0px;
   label {
-    font-size: 22px;
+    font-size: 20px;
     color: #424242;
+    margin-top: 3%;
   }
   input {
     margin-top: 10px;
@@ -84,11 +91,12 @@ body {
 }
 
 #mc-embedded-subscribe {
+  text-align: center;
   background: #dc5151;
   color: white;
   font-weight: bold;
   border-radius: 3px;
-  padding: 3px 22px;
+  padding: 3px 20px;
   box-shadow: none;
   border: none;
 }
