@@ -71,3 +71,24 @@ body {
 .carousel-control.right {
   background-image: none;
 }
+
+#mc_embed_signup {
+  margin: 10px;
+  label {
+    font-size: 22px;
+    color: #424242;
+  }
+  input {
+    margin-top: 10px;
+  }
+}
+
+#mc-embedded-subscribe {
+  background: #dc5151;
+  color: white;
+  font-weight: bold;
+  border-radius: 3px;
+  padding: 3px 22px;
+  box-shadow: none;
+  border: none;
+}

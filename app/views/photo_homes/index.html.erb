@@ -59,6 +59,26 @@
     Cette gestion inclut la distribution, via l’application To Good To Go, de certains plats réalisés sur place. Nous reversons tous les revenus de ces transactions à l'association Action contre la faim.</p>
   </div>
 
+  <div id="mc_embed_signup">
+    <form action="https://pixeletbechamel.us8.list-manage.com/subscribe/post?u=d7fa94b094c52b21ae0e45ac0&amp;id=2e4ec7f08c" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+      <div class="row">
+        <div class="col-xs-12 col-md-offset-4 col-md-4">
+          <label for="mce-EMAIL">Inscrivez vous à notre newsletter !</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12 col-md-offset-4 col-md-2">
+          <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="adresse mail" required>
+        </div>
+        <div class="col-xs-12 col-md-2">
+          <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_d7fa94b094c52b21ae0e45ac0_2e4ec7f08c" tabindex="-1" value=""></div>
+          <div class="clear"><input type="submit" value="Inscription" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+        </div>
+      </div>
+    </form>
+  </div>
+
+
     <% if @articles&.last != nil && @articles.last&.photo? %>
       <div class="article flex">
         <%= cl_image_tag @articles.last.photo %>
@@ -72,7 +92,7 @@
     <% end %>
 
 
-       <p class="contact-btn"><%= link_to "Contactez-nous", contact_path %></p>
+    <p class="contact-btn"><%= link_to "Contactez-nous", contact_path %></p
 
 
 </div>
