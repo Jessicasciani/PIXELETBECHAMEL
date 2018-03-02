@@ -160,3 +160,8 @@
    background-image: asset-url('arrow-right.png') !important;
    background-size: cover !important;
 }
+
+#gallerySlider .placeholder img {
+    max-height: 95% !important;
+    max-width: 95% !important;
+}
