@@ -151,3 +151,12 @@
     color: transparent !important;
 }
 
+#prevArrow {
+   background-image: asset-url('arrow-left.png') !important;
+   background-size: cover !important;
+}
+
+#nextArrow {
+   background-image: asset-url('arrow-right.png') !important;
+   background-size: cover !important;
+}
