@@ -152,13 +152,15 @@
 }
 
 #prevArrow {
-   background-image: asset-url('arrow-left.png') !important;
-   background-size: cover !important;
+  background-image: asset-url('arrow-left.png') !important;
+  background-size: cover !important;
+  left: 10px;
 }
 
 #nextArrow {
-   background-image: asset-url('arrow-right.png') !important;
-   background-size: cover !important;
+  background-image: asset-url('arrow-right.png') !important;
+  background-size: cover !important;
+  right: 10px;
 }
 
 #gallerySlider .placeholder img {
