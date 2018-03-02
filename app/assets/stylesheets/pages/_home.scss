@@ -106,4 +106,7 @@ body {
   border: 1px solid #c4c3c3;
   width: 100%;
   padding: 3%;
+  &:focus {
+    outline: none;
+  }
 }

@@ -1,17 +1,13 @@
 <div class="navbar hidden-xs hidden-sm">
   <%= link_to "EQUIPE", equipe_path, id: "qui" %>
-  <%= link_to "PRESTATIONS", prestations_path, id: "prestations" %>
   <%= link_to "PORTFOLIO", portfolio_path, id: "portfolio"%>
   <%= link_to "STUDIO", studio_path, id: "studio"  %>
-  <%= link_to "ARTICLES", articles_path %>
+  <%= link_to "ACTUALITÉS", articles_path %>
   <%= link_to "CONTACT", contact_path %>
 </div>
 
 <div id="navbar-prestations" class="hidden-xs hidden-sm">
-  <%= link_to "Recettes", prestations_recettes_path %>
-  <%= link_to "Produits", prestations_produits_path %>
-  <%= link_to "Stop-Motions", prestations_stopmotions_path %>
-  <%= link_to "Pack", prestations_pack_path %>
+
 </div>
 
 <div id="navbar-portfolio" class="hidden-xs hidden-sm">
@@ -26,10 +22,9 @@
     </button>
     <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
       <li class="dropdown-item" ><%= link_to "EQUIPE", equipe_path %></li>
-      <li class="dropdown-item" ><%= link_to "PRESTATIONS", prestations_path%></li>
       <li class="dropdown-item" ><%= link_to "PORTFOLIO", portfolio_path %></li>
       <li class="dropdown-item" ><%= link_to "STUDIO", studio_path %></li>
-      <li class="dropdown-item" ><%= link_to "ARTICLES", articles_path %></li>
+      <li class="dropdown-item" ><%= link_to "ACTUALITÉS", articles_path %></li>
       <li class="dropdown-item" ><%= link_to "CONTACT", contact_path %></li>
     </ul>
   </div>
@@ -37,18 +32,11 @@
 
 
 <script>
-  var link = document.getElementById("prestations");
-console.log(link);
 
-link.addEventListener("mouseenter", function() {
-  document.getElementById("navbar-prestations").classList.add("opacity");
-  document.getElementById("navbar-portfolio").classList.remove("opacity-port");
-});
 
 var wrapper = document.getElementById("wrapper");
 
 wrapper.addEventListener("mouseleave", function() {
-  document.getElementById("navbar-prestations").classList.remove("opacity");
   document.getElementById("navbar-portfolio").classList.remove("opacity-port");
 });
 
@@ -56,13 +44,12 @@ var qui = document.getElementById("qui");
 console.log(qui);
 
 qui.addEventListener("mouseenter", function() {
-  document.getElementById("navbar-prestations").classList.remove("opacity");
+  document.getElementById("navbar-portfolio").classList.remove("opacity-port");
 });
 
 var portfolio = document.getElementById("portfolio");
 
 portfolio.addEventListener("mouseenter", function() {
-  document.getElementById("navbar-prestations").classList.remove("opacity");
   document.getElementById("navbar-portfolio").classList.add("opacity-port");
 });
 
