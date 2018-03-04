@@ -2,6 +2,7 @@
 //= require jquery_ujs
 //= require bootstrap-sprockets
 //= require photoswipe
+//= require tinymce
 //= require gallery/responsive
 //= require gallery/slideshow
 //= require gallery/galleria
