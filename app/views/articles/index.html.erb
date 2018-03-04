@@ -9,6 +9,11 @@
         <h2 class="title-article"><%= article.title %></h2>
         <p><%= simple_format(article.text) %></p>
       </div>
+      <% if current_user&.admin  %>
+        <%= link_to article_path(article), method: :delete do %>
+          <i class="fa fa-trash-o poub-article" aria-hidden="true"></i>
+        <% end %>
+      <% end %>
     </div>
   <% end %>
 
