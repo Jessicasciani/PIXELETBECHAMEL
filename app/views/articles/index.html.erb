@@ -13,6 +13,9 @@
         <%= link_to article_path(article), method: :delete do %>
           <i class="fa fa-trash-o poub-article" aria-hidden="true"></i>
         <% end %>
+        <%= link_to edit_article_path(article), article: @article do %>
+          <i class="fa fa-pencil-square-o poub-article"></i>
+        <% end %>
       <% end %>
     </div>
   <% end %>
