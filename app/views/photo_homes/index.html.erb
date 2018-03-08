@@ -89,8 +89,8 @@
         <div class="article-text text-center">
           <p><%= @articles.last.created_at.strftime("%b %d, %Y") %></p>
           <h2 class="title-article"><%= @articles.last.title %></h2>
-          <p><%= simple_format(@articles.last.text) %></p>
-          <p> <%= link_to "Plus d'articles...", articles_path  %></p>
+          <p><%= simple_format(@articles.last.text).first(100) %>...</p>
+          <p> <%= link_to "Lire la suite", articles_path  %></p>
         </div>
       </div>
     <% end %>
