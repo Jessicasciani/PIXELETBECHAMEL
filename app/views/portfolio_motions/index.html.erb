@@ -1,6 +1,6 @@
 <div class="container">
   <div class="row">
-    <% @portfolio_motions.each do |p| %>
+    <% @portfolio_motions.reverse.each do |p| %>
       <div class="col-xs-12 col-md-4">
         <% var = p.video.to_s.split("mp4") %>
         <% new_var = var.first << "jpg" %>
