@@ -4,28 +4,45 @@ body {
   background: white;
 }
 
+
 .carousel {
-  height: calc(100vh - 210px);
+  height: calc(100vh - 320px);
+}
+
+.carousel-2-inner {
+  height: 100px !important;
+}
+
+.carousel-2 {
+  height: 100px !important;
+}
+
+.carousel-2-inner > .item > img {
+  object-fit: cover;
+  width: 100% !important;
+  height: 100px !important;
 }
 
 .carousel-inner {
-  height: calc(100vh - 210px);
+  height: calc(100vh - 320px);
+  width: 85%;
+  margin: auto;
 }
 
 .carousel-inner > .item > img {
   object-fit: cover;
   width: 100%;
-  height: calc(100vh - 210px);
+  height: calc(100vh - 320px);
   background:linear-gradient(rgba(50,50,50,0.2), rgba(50,50,50,0.1));
 }
 
 
 .glyphicon.glyphicon-chevron-right {
-  margin-right: -90px;
+  margin-right: 10px;
 }
 
 .glyphicon.glyphicon-chevron-left {
-  margin-left: -90px;
+  margin-left: 10px;
 }
 
 
@@ -46,7 +63,7 @@ body {
     width: 96%;
     margin-right: 80px;
   }
-  margin: 50px;
+  margin: 130px 50px 30px 50px;
   p {
     margin-top: 25%;
   }
