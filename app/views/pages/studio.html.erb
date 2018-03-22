@@ -1,63 +1,64 @@
-  <div class="studio flex hidden-xs hidden-sm">
-    <div class="part-right">
-      <div id="myCarouselbis" class="carousel slide carousel-fade" data-ride="carousel">
-        <!-- Indicators -->
-        <ol class="carousel-indicators">
-          <li data-target="#myCarouselbis" data-slide-to="0" class="active"></li>
-          <li data-target="#myCarouselbis" data-slide-to="1"></li>
-          <li data-target="#myCarouselbis" data-slide-to="2"></li>
-          <li data-target="#myCarouselbis" data-slide-to="3"></li>
-        </ol>
+<div class="hidden-xs hidden-sm">
+  <div class="studio flex">
+      <div class="part-right">
+        <div id="myCarouselbis" class="carousel slide carousel-fade" data-ride="carousel">
+          <!-- Indicators -->
+          <ol class="carousel-indicators">
+            <li data-target="#myCarouselbis" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarouselbis" data-slide-to="1"></li>
+            <li data-target="#myCarouselbis" data-slide-to="2"></li>
+            <li data-target="#myCarouselbis" data-slide-to="3"></li>
+          </ol>
 
-        <!-- Wrapper for slides -->
-        <div class="carousel-inner bis">
-          <div class="item active">
-            <%= image_tag 'studio1.png', class: "studio-photo"  %>
+          <!-- Wrapper for slides -->
+          <div class="carousel-inner bis">
+            <div class="item active">
+              <%= image_tag 'studio1.png', class: "studio-photo"  %>
+            </div>
+
+            <div class="item">
+              <%= image_tag 'studio19.jpg' %>
+            </div>
+
+            <div class="item">
+              <%= image_tag 'studio4.jpg', class: "studio-photo"%>
+            </div>
+
+            <div class="item">
+              <%= image_tag 'studio10.jpg', class: "studio-photo" %>
+            </div>
+
           </div>
 
-          <div class="item">
-            <%= image_tag 'studio19.jpg' %>
-          </div>
-
-          <div class="item">
-            <%= image_tag 'studio4.jpg', class: "studio-photo"%>
-          </div>
-
-          <div class="item">
-            <%= image_tag 'studio10.jpg', class: "studio-photo" %>
-          </div>
+          <a class="left carousel-control" href="#myCarouselbis" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left lefti" id="lefti"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="right carousel-control" href="#myCarouselbis" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right righti"></span>
+            <span class="sr-only">Next</span>
+          </a>
 
         </div>
-
-        <a class="left carousel-control" href="#myCarouselbis" data-slide="prev">
-          <span class="glyphicon glyphicon-chevron-left lefti" id="lefti"></span>
-          <span class="sr-only">Previous</span>
-        </a>
-        <a class="right carousel-control" href="#myCarouselbis" data-slide="next">
-          <span class="glyphicon glyphicon-chevron-right righti"></span>
-          <span class="sr-only">Next</span>
-        </a>
-
       </div>
-    </div>
-    <div class="part-left">
-      <div class="text-studio">
-        <p> Le studio situé dans le 18ème arrondissement de Paris, est constitué d’une cuisine traditionnelle ouverte sur un large espace de shooting.</p>
-        <p>Le studio peut être proposé en location: Lieu clair ouvert sur une terrasse accessible. Endroit parfait pour des dégustations, cocktails, et ateliers culinaires. Ambiance chaleureuse avec parquet et poutres "Eiffel".</p>
-        <p>A découvrir !</p>
+      <div class="part-left">
+        <div class="text-studio">
+          <p> Le studio situé dans le 18ème arrondissement de Paris, est constitué d’une cuisine traditionnelle ouverte sur un large espace de shooting.</p>
+          <p>Le studio peut être proposé en location: Lieu clair ouvert sur une terrasse accessible. Endroit parfait pour des dégustations, cocktails, et ateliers culinaires. Ambiance chaleureuse avec parquet et poutres "Eiffel".</p>
+          <p>A découvrir !</p>
+        </div>
+        <div class="adresse">
+          <p class="text-center"><em>14, rue de la Chapelle 75018 Paris</em></p>
+          <p class="text-center"><em>Métro Marx Dormoy, ligne 12</em><%= image_tag 'metro.png', class: "metro" %></p>
+        </div>
+        <div class="box-prix">
+          <p>Location possible à partir de 85 euros TTC/heure</p>
+        </div>
+        <p class="text-center"><strong>Parking privé disponible</strong></p>
       </div>
-      <div class="adresse">
-        <p class="text-center"><em>14, rue de la Chapelle 75018 Paris</em></p>
-        <p class="text-center"><em>Métro Marx Dormoy, ligne 12</em><%= image_tag 'metro.png', class: "metro" %></p>
-      </div>
-      <div class="box-prix">
-        <p>Location possible à partir de 85 euros TTC/heure</p>
-      </div>
-      <p class="text-center"><strong>Parking privé disponible</strong></p>
-    </div>
   </div>
-
-  <div id="map" style="width: 100%; height: 300px;"></div>
+    <div id="map" style="width: 100%; height: 300px;"></div>
+</div>
 
 
 <!-- MOBILE
@@ -76,13 +77,24 @@
       <p>Location possible à partir de 85 euros TTC/heure</p>
     </div>
       <p>Parking disponible</p>
+    <div id="mapMob" style="width: 100%; height: 300px;"></div>
   </div>
+
 
 
 <%= content_for(:after_js) do %>
   <script>
 
   let map = new google.maps.Map(document.getElementById('map'), {
+  center: { lat: 48.8944051, lng: 2.3595001999999567 },
+  zoom: 14  // Change this value from 0 to 18
+});
+  marker = new google.maps.Marker({
+      map: map,
+      position: { lat: 48.8944051, lng: 2.3595001999999567 },
+    });
+
+ let mapMob = new google.maps.Map(document.getElementById('mapMob'), {
   center: { lat: 48.8944051, lng: 2.3595001999999567 },
   zoom: 14  // Change this value from 0 to 18
 });
