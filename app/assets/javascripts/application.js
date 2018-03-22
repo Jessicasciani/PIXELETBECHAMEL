@@ -11,5 +11,6 @@
 //= require jquery/jquery.easing-1.3
 //= require jquery/jquery.elastislide
 //= require jquery/jquery.tmpl.min
+//= require gmaps/google
 //= require_tree .
 

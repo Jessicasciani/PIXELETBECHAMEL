@@ -57,7 +57,11 @@
     </div>
   </div>
 
+  <div id="map" style="width: 100%; height: 300px;"></div>
 
+
+<!-- MOBILE
+ -->
 
   <div class="studio hidden-md hidden-lg">
     <%= image_tag 'studio19.jpg', class: "photo-studio-xs" %>
@@ -73,6 +77,23 @@
     </div>
       <p>Parking disponible</p>
   </div>
+
+<script src="https://maps.googleapis.com/maps/api/js"></script> <!-- Added -->
+<script src="build/application.js"></script>
+<script>
+  let map = new google.maps.Map(document.getElementById('map'), {
+  center: { lat: 48.8944051, lng: 2.3595001999999567 },
+  zoom: 14  // Change this value from 0 to 18
+});
+  marker = new google.maps.Marker({
+      map: map,
+      position: { lat: 48.8944051, lng: 2.3595001999999567 },
+    });
+</script>
+
+
+
+
 
   <%= content_for(:title, "Studio") %>
 

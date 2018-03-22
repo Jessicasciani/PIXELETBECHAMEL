@@ -12,6 +12,7 @@ gem 'cloudinary'
 gem 'carrierwave', '~> 1.2'
 gem 'tinymce-rails'
 gem 'gmaps4rails'
+gem 'coffee-rails'
 
 
 
