@@ -118,7 +118,7 @@
     <% end %>
 </div>
 <div class="hidden-md hidden-lg">
-  <%= cl_image_tag @articles.last.photo %>
+  <%= cl_image_tag @articles.last.photo, class: "home-article-photo" %>
   <p> <%= link_to "Lire nos derniers articles", articles_path  %></p>
 </div>
 
