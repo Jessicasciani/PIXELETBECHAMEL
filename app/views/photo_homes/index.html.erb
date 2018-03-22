@@ -104,7 +104,7 @@
     </form>
   </div>
 
-
+<div class="hidden-xs hidden-sm">
     <% if @articles&.last != nil && @articles.last&.photo? %>
       <div class="article">
         <%= cl_image_tag @articles.last.photo %>
@@ -116,7 +116,11 @@
         </div>
       </div>
     <% end %>
-
+</div>
+<div class="hidden-md hidden-lg">
+  <%= cl_image_tag @articles.last.photo %>
+  <p> <%= link_to "Lire nos derniers articles", articles_path  %></p>
+</div>
 
     <p class="contact-btn"><%= link_to "Contactez-nous", contact_path %></p>
 
