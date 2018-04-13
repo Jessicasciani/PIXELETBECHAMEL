@@ -14,7 +14,7 @@
     </div>
     <% @photo_homes[1..5].each do |photo_home| %>
       <div class="item">
-        <%= image_tag photo_home.photo %>
+        <%= cl_image_tag photo_home.photo %>
       </div>
     <% end %>
   </div>
