@@ -10,7 +10,7 @@
   <!-- Wrapper for slides -->
   <div class="carousel-inner">
     <div class="item active">
-      <%= image_tag @photo_homes[0].photo  %>
+      <%= cl_image_tag @photo_homes[0].photo  %>
     </div>
     <% @photo_homes[1..5].each do |photo_home| %>
       <div class="item">
