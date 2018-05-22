@@ -1,5 +1,9 @@
 .header {
   display:flex;
+  position: fixed;
+  top: 0;
+  z-index: 20;
+  width: 100%;
   align-items: center;
   justify-content: space-around;
   background-color: white;
@@ -29,5 +33,9 @@
   p {
     margin:0;
   }
+}
+
+.layout-content {
+  margin-top: 190px !important;
 }
 

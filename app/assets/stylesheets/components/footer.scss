@@ -1,11 +1,11 @@
 .footer {
-  background-color: #464646;
+  background-color: white;
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
   min-height: 150px;
-  color: white;
+  color: #575656;
   width: 100%;
   padding: 10px 13%;
   position: static;
@@ -31,7 +31,7 @@
   align-items: center;
 }
 .footer-links a {
-  color: white;
+  color: #575656;
   opacity: 1;
   text-decoration: none;
   font-size: 24px;
