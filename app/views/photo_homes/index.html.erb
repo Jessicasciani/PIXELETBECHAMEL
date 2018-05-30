@@ -89,13 +89,38 @@
 <div class="container">
   <div class="images-partners">
     <p class="text-center">Ils nous ont fait confiance</p>
-    <%= image_tag "logoconnetable.png", class: "logo-home" %>
-    <%= image_tag "logofindus.png", class: "logo-home" %>
-    <%= image_tag "logohachette.png", class: "logo-home" %>
-    <%= image_tag "logoleclerc.jpg", class: "logo-home" %>
-    <%= image_tag "logoliddle.png", class: "logo-home" %>
-    <%= image_tag "logomichel.png", class: "logo-home" %>
-      <%= image_tag "logoprestashop.jpg", class: "logo-home" %>
+
+    <div class="row text-center" style="display: flex; align-items: center; flex-wrap: wrap;">
+      <div class="col-xs-6 col-md-3">
+        <%= image_tag "logoconnetable.png", class: "logo-home" %>
+      </div>
+      <div class="col-xs-6 col-md-3">
+        <%= image_tag "logofindus.png", style: "height: 95px;" %>
+      </div>
+      <div class="col-xs-6 col-md-3">
+        <%= image_tag "logohachette.png", class: "logo-home" %>
+      </div>
+      <div class="col-xs-6 col-md-3">
+        <%= image_tag "logoleclerc.jpg", class: "logo-home" %>
+      </div>
+    </div>
+    <div class="row text-center" style="display: flex; align-items: center;  flex-wrap: wrap;">
+
+      <div class="col-xs-6 col-md-3">
+        <%= image_tag "logoliddle.png", class: "logo-home" %>
+      </div>
+      <div class="col-xs-6 col-md-3">
+        <%= image_tag "logomichel.png", class: "logo-home" %>
+      </div>
+      <div class="col-xs-6 col-md-3">
+        <%= image_tag "logoprestashop.jpg", class: "logo-home" %>
+      </div>
+      <div class="col-xs-6 col-md-3">
+        <%= image_tag "mastradlogo.jpg", class: "logo-home" %>
+      </div>
+
+    </div>
+
   </div>
 
 <!--   <p class="contact-btn"><%= link_to "Contactez-nous", contact_path %></p>
