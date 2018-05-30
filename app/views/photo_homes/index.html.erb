@@ -35,39 +35,45 @@
 
 <!-- FORM
  -->
-<% if current_user&.admin %>
-<div class="formulaires">
-  <div class="row">
-    <!-- <div class="col-xs-12 col-md-2">
-      <p>Ajouter une photo</p>
-      <div class="form-home"> -->
-<!--         render 'photo_homes/form', photo_home: @photo_home
- -->
-     <!--  </div>
-    </div> -->
-      <% @photo_homes.each_with_index do |photo_home, index| %>
-        <div class="col-xs-12 col-md-2">
-          <p>Modifier photo <%= index + 1%></p>
-          <div class="form-home">
-            <%= render 'photo_homes/form', photo_home: photo_home, method: :patch%>
+  <% if current_user&.admin %>
+  <div class="formulaires">
+    <div class="row">
+      <!-- <div class="col-xs-12 col-md-2">
+        <p>Ajouter une photo</p>
+        <div class="form-home"> -->
+  <!--         render 'photo_homes/form', photo_home: @photo_home
+   -->
+       <!--  </div>
+      </div> -->
+        <% @photo_homes.each_with_index do |photo_home, index| %>
+          <div class="col-xs-12 col-md-2">
+            <p>Modifier photo <%= index + 1%></p>
+            <div class="form-home">
+              <%= render 'photo_homes/form', photo_home: photo_home, method: :patch%>
+            </div>
           </div>
-        </div>
-      <% end %>
-      <%= link_to "Sign out", destroy_user_session_path, method: :delete %>
+        <% end %>
+        <%= link_to "Sign out", destroy_user_session_path, method: :delete %>
+      </div>
     </div>
-  </div>
-<% end %>
+  <% end %>
 
-  <div class="waste">
+</div>
 
-    <%= image_tag "Logotoogood.png" %>
-
-    <div style="width: 50%;">
-      <p class="text-center"> Le studio de photographies culinaires Pixel et Béchamel met en place des actions quotidiennes visant à réduire les déchets alimentaires et à les recycler.</p>
-      <p class="text-center">Cette gestion inclut la distribution, via l’application To Good To Go, de certains plats réalisés sur place. Nous reversons tous les revenus de ces transactions à l'association Action contre la faim.</p>
-    </div>
+<div class="waste hidden-xs hidden-sm">
+  <%= image_tag "Logotoogood.png" %>
+  <div style="width: 50%;">
+    <p class="text-center"> Le studio de photographies culinaires Pixel et Béchamel met en place des actions quotidiennes visant à réduire les déchets alimentaires et à les recycler.</p>
+    <p class="text-center">Cette gestion inclut la distribution, via l’application To Good To Go, de certains plats réalisés sur place. Nous reversons tous les revenus de ces transactions à l'association Action contre la faim.</p>
   </div>
 </div>
+
+<div class="waste-mobile hidden-md hidden-lg">
+  <%= image_tag "Logotoogood.png", class: "logo-waste-mobile" %>
+  <p> Le studio de photographies culinaires Pixel et Béchamel met en place des actions quotidiennes visant à réduire les déchets alimentaires et à les recycler.</p>
+  <p>Cette gestion inclut la distribution, via l’application To Good To Go, de certains plats réalisés sur place. Nous reversons tous les revenus de ces transactions à l'association Action contre la faim.</p>
+</div>
+
 
   <div id="mc_embed_signup">
     <form action="https://pixeletbechamel.us8.list-manage.com/subscribe/post?u=d7fa94b094c52b21ae0e45ac0&amp;id=2e4ec7f08c" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
