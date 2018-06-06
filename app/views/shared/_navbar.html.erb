@@ -1,21 +1,12 @@
 <div class="navbar hidden-xs hidden-sm">
   <%= link_to "ÉQUIPE", equipe_path, id: "qui" %>
-  <%= link_to "PORTFOLIO", portfolio_path, id: "portfolio"%>
+  <%= link_to "PHOTOS", portfolio_photos_path %>
+  <%= link_to "STOP-MOTIONS", portfolio_motions_path %>
   <%= link_to "STUDIO", studio_path, id: "studio"  %>
   <%= link_to "ACTUALITÉS", articles_path %>
   <%= link_to "CONTACT", contact_path %>
 </div>
 
-<div id="navbar-prestations" class="hidden-xs hidden-sm">
-
-</div>
-
-<div id="navbar-portfolio" class="hidden-xs hidden-sm">
-  <div class="wrapper-links">
-    <%= link_to "Photos", portfolio_photos_path %>
-    <%= link_to "Stop-motions", portfolio_motions_path %>
-  </div>
-</div>
 
 <div class="navbar hidden-md hidden-lg">
   <div class="dropdown">
@@ -24,7 +15,8 @@
     </button>
     <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
       <li class="dropdown-item" ><%= link_to "ÉQUIPE", equipe_path %></li>
-      <li class="dropdown-item" ><%= link_to "PORTFOLIO", portfolio_path %></li>
+      <li class="dropdown-item" ><%= link_to "PHOTOS", portfolio_photos_path %></li>
+      <li class="dropdown-item" ><%= link_to "STOP-MOTIONS", portfolio_motions_path %></li>
       <li class="dropdown-item" ><%= link_to "STUDIO", studio_path %></li>
       <li class="dropdown-item" ><%= link_to "ACTUALITÉS", articles_path %></li>
       <li class="dropdown-item" ><%= link_to "CONTACT", contact_path %></li>

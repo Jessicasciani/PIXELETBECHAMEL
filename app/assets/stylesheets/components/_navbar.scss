@@ -2,7 +2,7 @@
   display: flex;
   position: fixed;
   z-index: 20;
-  top: 112px;
+  top: 115px;
   width: 100%;
   align-items: center;
   justify-content: space-between;
@@ -11,6 +11,7 @@
   height: 30px;
   color: $black;
   a {
+    font-size: 17px;
     text-decoration: none;
     color: black;
     transition: 0.4s ease-in-out;

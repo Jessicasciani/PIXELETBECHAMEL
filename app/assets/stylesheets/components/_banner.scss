@@ -1,0 +1,20 @@
+.banner-photos {
+  height: 500px;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 30px;
+  h1 {
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    margin: 0;
+  }
+}
+
+.trait-souligne {
+  width: 20%;
+  border-bottom: 2px solid white;
+}
