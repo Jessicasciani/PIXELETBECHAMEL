@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180219123934) do
+ActiveRecord::Schema.define(version: 20180611173933) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -23,6 +23,12 @@ ActiveRecord::Schema.define(version: 20180219123934) do
     t.string   "title"
   end
 
+  create_table "folders", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string   "client"
+  end
+
   create_table "photo_homes", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -30,10 +36,12 @@ ActiveRecord::Schema.define(version: 20180219123934) do
   end
 
   create_table "portfolio_motions", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
     t.string   "client"
     t.string   "video"
+    t.integer  "video_folder_id"
+    t.index ["video_folder_id"], name: "index_portfolio_motions_on_video_folder_id", using: :btree
   end
 
   create_table "portfolio_photos", force: :cascade do |t|
@@ -41,6 +49,8 @@ ActiveRecord::Schema.define(version: 20180219123934) do
     t.datetime "updated_at", null: false
     t.string   "photo"
     t.string   "client"
+    t.integer  "folder_id"
+    t.index ["folder_id"], name: "index_portfolio_photos_on_folder_id", using: :btree
   end
 
   create_table "users", force: :cascade do |t|
@@ -59,6 +69,13 @@ ActiveRecord::Schema.define(version: 20180219123934) do
     t.boolean  "admin",                  default: false
     t.index ["email"], name: "index_users_on_email", unique: true, using: :btree
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
+  end
+
+  create_table "video_folders", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string   "client"
+    t.string   "photo"
   end
 
 end

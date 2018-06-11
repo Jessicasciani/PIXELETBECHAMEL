@@ -1,7 +1,7 @@
 class PortfolioPhotosController < ApplicationController
 
   def index
-    @portfolio_photos = PortfolioPhoto.all
+    @folder = Folder.find(params[:folder_id])
     @portfolio_photo = PortfolioPhoto.new
   end
 
@@ -9,15 +9,17 @@ class PortfolioPhotosController < ApplicationController
   end
 
   def create
+    @folder = Folder.find(params[:folder_id])
     @portfolio_photo = PortfolioPhoto.create(photo_params)
+    @portfolio_photo.folder = @folder
     @portfolio_photo.save
-    redirect_to portfolio_photos_path
+    redirect_to folder_portfolio_photos_path
   end
 
   def destroy
     @portfolio_photo = PortfolioPhoto.find(params[:id])
     @portfolio_photo.destroy
-    redirect_to portfolio_photos_path
+    redirect_to folder_portfolio_photos_path
   end
 
 

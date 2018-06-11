@@ -1,14 +1,13 @@
-<div class="banner-photos" style="background-image: url( <%= image_path "stopcover.jpg" %>);">
-  <h1>STOP-MOTIONS</h1>
-  <div class="trait-souligne">
-  </div>
-</div>
-
-<div class="container">
+<div class="container youtube-videos">
   <div class="row">
-    <% @portfolio_motions.reverse.each do |p| %>
+    <% @video_folder.portfolio_motions.reverse.each do |p| %>
       <div class="col-xs-12 col-md-4">
-        <iframe width="350" height="215" src="https://www.youtube.com/embed/<%= p.video %>" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        <div class="video-youtube">
+          <iframe height="250" src="https://www.youtube.com/embed/<%= p.video %>" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+          <% if current_user&.admin %>
+            <%= link_to "X", video_folder_portfolio_motion_path(@video_folder, p), method: :delete  %>
+          <% end %>
+        </div>
       </div>
     <% end %>
   </div>

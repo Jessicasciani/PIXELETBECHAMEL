@@ -10,8 +10,16 @@ Rails.application.routes.draw do
   get 'prestations/produits', to: 'pages#produits'
   get 'prestations/stopmotions', to: 'pages#stopmotion'
   get 'prestations/pack', to: 'pages#packnav'
-  resources :portfolio_photos
-  resources :portfolio_motions
+
+  resources :folders do
+    resources :portfolio_photos
+  end
+
+  resources :video_folders do
+    resources :portfolio_motions
+  end
+
+
   resources :photo_homes
   resources :articles
   # post '/portfolio_photos', to: 'portfolio_photos#create'

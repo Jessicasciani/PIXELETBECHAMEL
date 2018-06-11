@@ -1,7 +1,3 @@
 class PortfolioMotion < ApplicationRecord
-
-  # def set_success(format, opts)
-  #   self.success = true
-  # end
-
+  belongs_to :video_folder
 end

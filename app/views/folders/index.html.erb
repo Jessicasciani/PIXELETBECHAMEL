@@ -1,0 +1,34 @@
+<div class="banner-photos" style="background-image: url( <%= image_path "header-photo.jpg" %>);">
+  <h1>PORTFOLIO</h1>
+  <div class="trait-souligne">
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+
+    <% @folders&.each do |f| %>
+      <div class="col-xs-12 col-md-4">
+        <% if f.portfolio_photos.empty?  %>
+          <div class="card-client" style="background-color: grey;">
+        <% else %>
+          <div class="card-client" style="background-image: url('<%= cl_image_path f.portfolio_photos.first.photo %>');">
+        <% end %>
+          <h1><%= f.client.upcase %></h1>
+          <%= link_to "", folder_portfolio_photos_path(f), class: "link-folder"  %>
+        </div>
+        <%= link_to "X", folder_path(f), method: :delete  %>
+      </div>
+    <% end %>
+  </div>
+
+
+
+  <% if current_user&.admin  %>
+    <div class="form-cache">
+      <%= render 'folders/form', folder: @folder %>
+      <%= link_to "Sign out", destroy_user_session_path, method: :delete %>
+    </div>
+  <% end %>
+
+</div>

@@ -1,7 +1,7 @@
 class PortfolioMotionsController < ApplicationController
 
   def index
-    @portfolio_motions = PortfolioMotion.all
+    @video_folder = VideoFolder.find(params[:video_folder_id])
     @portfolio_motion = PortfolioMotion.new
   end
 
@@ -9,15 +9,17 @@ class PortfolioMotionsController < ApplicationController
   end
 
   def create
-    @portfolio_motion = PortfolioMotion.create(motion_params)
+    @video_folder = VideoFolder.find(params[:video_folder_id])
+    @portfolio_motion = PortfolioMotion.new(motion_params)
+    @portfolio_motion.video_folder = @video_folder
     @portfolio_motion.save
-    redirect_to portfolio_motions_path
+    redirect_to video_folder_portfolio_motions_path
   end
 
   def destroy
     @portfolio_motion = PortfolioMotion.find(params[:id])
     @portfolio_motion.destroy
-    redirect_to portfolio_motions_path
+    redirect_to video_folder_portfolio_motions_path
   end
 
 

@@ -1,6 +1,6 @@
-<%= simple_form_for [@folder, portfolio_photo] do |f| %>
+<%= simple_form_for(video_folder) do |f| %>
   <%= f.input :client, class: "form-control" %>
   <%= f.input :photo, class: "form-control" %>
   <%= f.input :photo_cache, as: :hidden %>
-  <%= f.submit 'Ajouter une photo', class: "abtn abtn-lg btn-primary" %>
+  <%= f.submit 'Ajouter un dossier', class: "abtn abtn-lg btn-primary" %>
 <% end %>

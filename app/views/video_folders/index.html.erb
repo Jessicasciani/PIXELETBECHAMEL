@@ -1,0 +1,30 @@
+<div class="banner-photos" style="background-image: url( <%= image_path "stopcover.jpg" %>);">
+  <h1>VIDEOS</h1>
+  <div class="trait-souligne-stop">
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+
+    <% @video_folders&.each do |f| %>
+      <div class="col-xs-12 col-md-4">
+        <div class="card-client" style="background-image: url('<%= cl_image_path f.photo %>'); background-size: cover;">
+          <h1><%= f.client.upcase %></h1>
+          <%= link_to "", video_folder_portfolio_motions_path(f), class: "link-folder"  %>
+        </div>
+        <%= link_to "X", video_folder_path(f), method: :delete  %>
+      </div>
+    <% end %>
+  </div>
+
+
+
+  <% if current_user&.admin  %>
+    <div class="form-cache">
+      <%= render 'video_folders/form', video_folder: @video_folder %>
+      <%= link_to "Sign out", destroy_user_session_path, method: :delete %>
+    </div>
+  <% end %>
+
+</div>
