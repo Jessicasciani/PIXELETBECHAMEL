@@ -12,12 +12,14 @@
         <% if f.portfolio_photos.empty?  %>
           <div class="card-client" style="background-color: grey;">
         <% else %>
-          <div class="card-client" style="background-image: url('<%= cl_image_path f.portfolio_photos.first.photo %>');">
+          <div class="card-client" style="background-image: url('<%= cl_image_path f.portfolio_photos.first.photo %>'); background-size: cover;">
         <% end %>
           <h1><%= f.client.upcase %></h1>
           <%= link_to "", folder_portfolio_photos_path(f), class: "link-folder"  %>
         </div>
-        <%= link_to "X", folder_path(f), method: :delete  %>
+        <% if current_user&.admin %>
+          <%= link_to "X", folder_path(f), method: :delete  %>
+        <% end %>
       </div>
     <% end %>
   </div>
