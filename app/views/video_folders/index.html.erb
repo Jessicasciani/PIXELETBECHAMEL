@@ -13,7 +13,9 @@
           <h1><%= f.client.upcase %></h1>
           <%= link_to "", video_folder_portfolio_motions_path(f), class: "link-folder"  %>
         </div>
-        <%= link_to "X", video_folder_path(f), method: :delete  %>
+        <% if current_user&.admin %>
+          <%= link_to "X", video_folder_path(f), method: :delete  %>
+        <% end %>
       </div>
     <% end %>
   </div>
