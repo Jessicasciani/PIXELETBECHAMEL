@@ -20,6 +20,16 @@ class VideoFoldersController < ApplicationController
     redirect_to video_folders_path
   end
 
+  def edit
+    @video_folder = VideoFolder.find(params[:id])
+  end
+
+  def update
+    @video_folder = VideoFolder.find(params[:id])
+    @video_folder.update(video_folder_params)
+    redirect_to video_folders_path
+  end
+
 
 private
 

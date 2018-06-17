@@ -15,6 +15,7 @@
         </div>
         <% if current_user&.admin %>
           <%= link_to "X", video_folder_path(f), method: :delete  %>
+          <%= link_to "Edit", edit_video_folder_path(f)  %>
         <% end %>
       </div>
     <% end %>
