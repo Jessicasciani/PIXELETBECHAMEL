@@ -10,7 +10,7 @@
     <% @video_folders&.each do |f| %>
       <div class="col-xs-12 col-md-4">
         <div class="card-client" style="background-image: url('<%= cl_image_path f.photo %>'); background-size: cover;background-position: center;">
-          <h1><%= f.client.upcase %></h1>
+          <h1><%= f.client %></h1>
           <%= link_to "", video_folder_portfolio_motions_path(f), class: "link-folder"  %>
         </div>
         <% if current_user&.admin %>

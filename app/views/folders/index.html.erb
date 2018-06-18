@@ -14,7 +14,7 @@
         <% else %>
           <div class="card-client" style="background-image: url('<%= cl_image_path f.portfolio_photos.first.photo %>'); background-size: cover;background-position: center;">
         <% end %>
-          <h1><%= link_to f.client.upcase, folder_portfolio_photos_path(f) %></h1>
+          <h1><%= link_to f.client, folder_portfolio_photos_path(f) %></h1>
           <%= link_to "", folder_portfolio_photos_path(f), class: "link-folder"  %>
         </div>
         <% if current_user&.admin %>
