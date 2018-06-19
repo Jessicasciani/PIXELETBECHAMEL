@@ -9,10 +9,10 @@
 
     <% @folders&.each do |f| %>
       <div class="col-xs-12 col-md-4">
-        <% if f.photo.empty?  %>
-          <div class="card-client" style="background-color: grey;">
-        <% else %>
+        <% if f.photo? %>
           <div class="card-client" style="background-image: url('<%=  cl_image_path f.photo %>'); background-size: cover;background-position: center;">
+        <% else %>
+          <div class="card-client" style="background-color: grey;">
         <% end %>
           <h1><%= link_to f.client, folder_portfolio_photos_path(f) %></h1>
           <%= link_to "", folder_portfolio_photos_path(f), class: "link-folder"  %>

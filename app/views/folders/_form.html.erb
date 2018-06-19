@@ -1,4 +1,6 @@
 <%= simple_form_for(@folder) do |f| %>
   <%= f.input :client, class: "form-control" %>
+  <%= f.input :photo, class: "form-control" %>
+  <%= f.input :photo_cache, as: :hidden %>
   <%= f.submit 'Ajouter un dossier', class: "abtn abtn-lg btn-primary" %>
 <% end %>

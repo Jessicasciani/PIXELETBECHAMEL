@@ -35,7 +35,7 @@ class FoldersController < ApplicationController
 private
 
   def folder_params
-    params.require(:folder).permit(:client)
+    params.require(:folder).permit(:client, :photo)
   end
 
 end
