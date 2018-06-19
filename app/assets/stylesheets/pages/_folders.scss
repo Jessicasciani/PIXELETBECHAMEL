@@ -6,6 +6,7 @@
       opacity: 0;
       position: absolute;
       z-index: 3;
+      text-align: center;
       color: white;
       font-size: 30px;
       top: 33%;
@@ -14,6 +15,11 @@
       a {
         color: white;
         text-decoration: none;
+      }
+      &:hover {
+        background-color: rgba(76,76,76,0.7);
+        transition: 1s;
+
       }
     }
   &:hover {
