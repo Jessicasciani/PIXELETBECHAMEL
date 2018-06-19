@@ -9,7 +9,7 @@
 
     <% @folders&.each do |f| %>
       <div class="col-xs-12 col-md-4">
-        <% if f.portfolio_photos.empty?  %>
+        <% if f.empty?  %>
           <div class="card-client" style="background-color: grey;">
         <% else %>
           <div class="card-client" style="background-image: url('<%=  cl_image_path f.photo %>'); background-size: cover;background-position: center;">
