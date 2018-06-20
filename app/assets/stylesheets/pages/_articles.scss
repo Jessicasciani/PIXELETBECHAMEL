@@ -1,12 +1,17 @@
 .article {
-  min-height: 350px;
+  min-height: 530px;
   box-shadow: 1px 1px 2px 0px rgba(148,148,148,0.8);
   margin: 50px 0px;
-  padding: 30px;
   justify-content: flex-start;
+  h2 {
+    font-size: 24px;
+  }
+  p {
+    font-size: 16px;
+  }
   img {
     margin-bottom: 20px;
-    height: 340px;
+    height: 280px;
     width: 100%;
     margin-right: 50px;
     object-fit: cover;
@@ -20,4 +25,36 @@
   }
 }
 
+.title-article {
+  min-height: 65px;
+  margin: 0px 14px;
+}
 
+.link-article {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  color: transparent;
+  z-index: 2;
+  width: 100%;
+}
+
+.article-show {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.photo-article-show {
+  height: 340px;
+  object-fit: cover;
+  margin-bottom: 30px;
+}
+
+.article-title-show {
+  border-bottom: 1px solid #b2b2b2;
+  border-top: 1px solid #b2b2b2;
+  padding: 30px 0px;
+  margin-bottom: 50px;
+}
