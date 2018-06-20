@@ -14,8 +14,9 @@
         <% else %>
           <div class="card-client" style="background-color: grey;">
         <% end %>
-          <h1><%= link_to f.client, folder_portfolio_photos_path(f) %></h1>
-          <%= link_to "", folder_portfolio_photos_path(f), class: "link-folder"  %>
+          <%= link_to folder_portfolio_photos_path(f), class: "link-folder" do %>
+            <h1><%= f.client %></h1>
+          <% end %>
         </div>
         <% if current_user&.admin %>
           <%= link_to "X", folder_path(f), method: :delete  %>
