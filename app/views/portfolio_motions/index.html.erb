@@ -1,4 +1,12 @@
+<div class="text-center">
+  <h1><%= @video_folder.client.capitalize %></h1>
+</div>
+
 <div class="container youtube-videos">
+  <%= link_to folders_path, class: "bouton-retour" do %>
+    <i class="fa fa-arrow-circle-o-left" aria-hidden="true"></i>
+    Retour aux clients
+  <% end %>
   <div class="row">
     <% @video_folder.portfolio_motions.reverse.each do |p| %>
       <div class="col-xs-12 col-md-4">
