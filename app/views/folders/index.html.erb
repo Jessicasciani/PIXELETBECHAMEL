@@ -5,27 +5,35 @@
 </div>
 
 <div class="container">
-  <div class="row">
 
+  <div class="row">
     <% @folders&.each do |f| %>
+
       <div class="col-xs-12 col-md-4">
         <% if f.photo? %>
-          <div class="card-client" style="background-image: url('<%=  cl_image_path f.photo %>'); background-size: cover;background-position: center;">
+            <div class="logo-container">
+              <div class="logoprojects">
+                <div class="front">
+                  <div class="imagesize" style="background-image: linear-gradient(rgba(50,50,50,0.6), rgba(50,50,50,0.4)), url('<%= cl_image_path f.photo %>')";></div>
+                  <h2><%= f.client%></h2>
+                </div>
+                <div class="back"><%= cl_image_tag f.photo, class:"imagesize-filtered" %>
+                  <p>Voir le projet</p>
+                  <%= link_to "", folder_portfolio_photos_path(f), class: "link-folder"%>
+                </div>
+              </div>
+            </div>
         <% else %>
-          <div class="card-client" style="background-color: grey;">
+          <p> prout </p>
         <% end %>
-          <%= link_to folder_portfolio_photos_path(f), class: "link-folder" do %>
-            <h1><%= f.client %></h1>
-          <% end %>
-        </div>
         <% if current_user&.admin %>
           <%= link_to "X", folder_path(f), method: :delete  %>
           <%= link_to "Edit", edit_folder_path(f)  %>
         <% end %>
       </div>
+
     <% end %>
   </div>
-
 
 
   <% if current_user&.admin  %>
