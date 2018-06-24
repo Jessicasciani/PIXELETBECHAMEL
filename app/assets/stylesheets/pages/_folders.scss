@@ -72,6 +72,8 @@
   width: 350px;
   height: 350px;
   border-radius: 50%;
+  object-fit: cover;
+  object-position: center;
   filter: grayscale(100%) opacity(0.9) contrast(0.2);
 }
 
