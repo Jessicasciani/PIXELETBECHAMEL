@@ -102,3 +102,18 @@
   color: white;
 }
 
+.absolute-mobile {
+  text-align: center;
+  font-size:26px;
+  position: absolute;
+  top: 33%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  left: 43%;
+  word-wrap: break-word;
+  color: white;
+}
+
+.card-mobile-folder {
+  position: relative;
+}
