@@ -17,10 +17,12 @@
                   <div class="imagesize" style="background-image: linear-gradient(rgba(50,50,50,0.6), rgba(50,50,50,0.4)), url('<%= cl_image_path f.photo %>')";></div>
                   <h2><%= f.client%></h2>
                 </div>
-                <div class="back"><%= cl_image_tag f.photo, class:"imagesize-filtered" %>
-                  <p>Voir le projet</p>
+                <div class="back">
+                  <%= link_to folder_portfolio_photos_path(f), class: "link-folder" do %>
+                    <%= cl_image_tag f.photo, class:"imagesize-filtered" %>
+                    <p>Voir le projet</p>
+                  <% end %>
                 </div>
-                <%= link_to "", folder_portfolio_photos_path(f), class: "link-folder"%>
               </div>
             </div>
         <% else %>
