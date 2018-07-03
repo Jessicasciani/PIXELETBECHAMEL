@@ -6,7 +6,7 @@
   right: 0;
   z-index: 4;
   background-color: transparent;
-  height: 350px;
+  height: 320px;
   width: 100%;
 }
 
@@ -28,13 +28,13 @@
 
 .logo-container {
   perspective: 700;
-  height: 350px;
+  height: 320px;
   margin: 10px 10px;
 }
 
 .front, .back {
   width: 175px;
-  height: 350px;
+  height: 320px;
   backface-visibility: hidden;
 }
 
@@ -69,8 +69,8 @@
 }
 
 .imagesize-filtered {
-  width: 350px;
-  height: 350px;
+  width: 320px;
+  height: 320px;
   border-radius: 50%;
   object-fit: cover;
   object-position: center;
