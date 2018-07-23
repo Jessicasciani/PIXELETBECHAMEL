@@ -31,8 +31,8 @@
             <p> prout </p>
           <% end %>
           <% if current_user&.admin %>
-            <%= link_to "X", folder_path(f), method: :delete  %>
-            <%= link_to "Edit", edit_folder_path(f)  %>
+            <%= link_to "X", video_folder_path(f), method: :delete  %>
+            <%= link_to "Edit", edit_video_folder_path(f)  %>
           <% end %>
         </div>
 
@@ -55,7 +55,7 @@
 
           <% if current_user&.admin %>
             <%= link_to "X", video_folder_path(f), method: :delete  %>
-            <%= link_to "Edit", edit_folder_path(f)  %>
+            <%= link_to "Edit", edit_video_folder_path(f)  %>
           <% end %>
         </div>
 
