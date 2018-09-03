@@ -1,5 +1,6 @@
 <div class="big-photo-home" style="background-image: url(<%= cl_image_path @photo_homes[0].photo%>)";>
   <div class="navbar-home hidden-xs hidden-sm">
+    <%= image_tag "logo-blanc.png", class: "logo-home", style: "margin-right: 1%; margin-top: 1%;"%>
     <%= link_to "ÉQUIPE", equipe_path, id: "qui" %>
     <%= link_to "PHOTOS", folders_path %>
     <%= link_to "VIDEOS", video_folders_path %>
