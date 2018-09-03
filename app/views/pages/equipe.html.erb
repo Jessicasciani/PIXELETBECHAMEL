@@ -1,52 +1,90 @@
-<div class="full-container" style="background-image: url(<%= image_path 'fond.jpg' %>); background-repeat: no-repeat;background-size: cover;">
-  <div class="container">
-    <div class="row">
-      <div class="col-xs-12 col-md-6">
-        <div class="equipe-text text-center">
-          <%= image_tag "Maud.jpg", class: "photo-equipe" %>
-          <p><strong>Maud Argaïbi - Co-fondatrice et photographe culinaire</strong></p>
-          <p>Maud a commencé sa carrière en tant que Chef cuisinière, formée à l’École
-          Supérieure de Cuisine Française, major de la promotion 37.</p>
-          <p>C’est après quelques années dans le milieu de la gastronomie qu’elle s’est reconvertie professionnellement en tant que photographe culinaire.</p>
-          <p>A son compte depuis plus de 7 ans, c’est toujours la passion
-          de l’art culinaire et la gourmandise qui la motivent. Elle réalise des clichés pour la
-          publicité et l’édition, avec une spécialité en création de stop-motions culinaires.</p>
-          <p>Après quelques années à gérer son entreprise, elle décide désormais de ne plus faire ce chemin
-          entrepreneurial seule et de s’associer à sa soeur Laura Bregeon pour développer son
-          activité.</p>
-        </div>
+
+<div class="container">
+  <div class="hidden-xs hidden-sm">
+
+
+
+    <div class="member">
+      <%= image_tag "Maud.jpg", class: "photo-equipe" %>
+
+      <div class="member_description member_left">
+        <h2>MAUD ARGAIBI</h2>
+        <p style="font-style: italic">Co-fondatrice et photographe culinaire</p>
+        <hr>
+        <p>Maud a commencé sa carrière en tant que Chef cuisinière, formée à l’École
+        Supérieure de Cuisine Française, major de la promotion 37.</p>
+        <p>C’est après quelques années dans le milieu de la gastronomie qu’elle s’est reconvertie professionnellement en tant que photographe culinaire.</p>
+        <p>A son compte depuis plus de 7 ans, c’est toujours la passion
+        de l’art culinaire et la gourmandise qui la motivent. Elle réalise des clichés pour la
+        publicité et l’édition, avec une spécialité en création de stop-motions culinaires.</p>
+        <p>Après quelques années à gérer son entreprise, elle décide désormais de ne plus faire ce chemin
+        entrepreneurial seule et de s’associer à sa soeur Laura Bregeon pour développer son
+        activité.</p>
       </div>
-      <div class="col-xs-12 col-md-6">
-        <div class="equipe-text text-center" style="margin-bottom: 11%;">
-          <%= image_tag "Laura.jpg", class: "photo-equipe" %>
-          <p><strong>Laura Bregeon- Co-fondatrice et business developper</strong></p>
+
+    </div>
+
+    <div class="member">
+        <div class="member_description member_right">
+          <h2>LAURA BREGEON</h2>
+          <p style="font-style: italic">Co-fondatrice et business developper</p>
+          <hr>
           <p>Laura est en charge du développement commercial et de la gestion des projets de photographie culinaires.</p>
           <p>Suite à une formation en école de commerce spécialisation entrepreneuriale, elle crée un dynamisme et forge l’identité du studio autour des créations de sa soeur.</p>
         </div>
+        <%= image_tag "Laura.jpg", class: "photo-equipe" %>
+    </div>
+
+    <div class="member">
+      <%= image_tag "Lucie.jpg", class: "photo-equipe" %>
+      <div class="member_description member_left">
+        <h2>LUCIE LORRAIN</h2>
+        <p style="font-style: italic">Styliste culinaire</p>
+        <hr>
+        <p>Lucie est une véritable passionnée des arts de la table, elle aime passer son temps dans les marchés à la recherche de beaux produits et dans les boutiques de vaisselle pour mettre en valeurs les produits qu’elle a acheté.</p>
+        <p>Ses études l'ont conduit petit à petit vers le design culinaire afin de réunir ses études et son amour pour la cuisine.</p>
+        <p>Au studio elle est en charge du stylisme culinaire, un poste très créatif qui lui permet de créer des ambiances correspondantes au besoin du client.</p>
       </div>
     </div>
-    <div class="equipe">
-      <div class="row text-center">
-        <div class="col-sm-12 col-md-6">
-          <%= image_tag "Pierre.jpg", class: "photo-equipe" %>
-          <p class="text-center">Pierre Allonneau - Cuisinier</p>
-        </div>
 
-        <div class="col-sm-12 col-md-6">
-          <%= image_tag "Claire.jpg", class: "photo-equipe" %>
-          <p class="text-center">Claire Louiset - Photographe culinaire</p>
-        </div>
-        <div class="col-sm-12 col-md-6">
-          <%= image_tag "Lucie.jpg", class: "photo-equipe" %>
-          <p class="text-center"> Lucie LORRAIN - Styliste culinaire</p>
-        </div>
-         <div class="col-sm-12 col-md-6">
-          <%= image_tag "Sami.jpg", class: "photo-equipe" %>
-          <p class="text-center"> Samy JOURDAN - Chargé de coordination post-production</p>
-        </div>
+    <div class="member">
+      <div class="member_description member_right">
+        <h2>CLAIRE LOUISET</h2>
+        <p style="font-style: italic">Photographe culinaire</p>
+        <hr>
+        <p>Après des études de photographie, Claire a rejoint l’équipe de Pixel et Béchamel pour participer au développement du studio, où elle a pu mêler ses deux passions: la photographie et le culinaire.</p>
+        <p>Elle suit les traces de sa famille, avec un père photographe et un grand-père cuisinier.</p>
+      </div>
+      <%= image_tag "Claire.jpg", class: "photo-equipe" %>
     </div>
-  </div>
 
+
+    <div class="member">
+      <%= image_tag "Pierre.jpg", class: "photo-equipe" %>
+      <div class="member_description member_left">
+        <h2>PIERRE ALLONNEAU</h2>
+        <p style="font-style: italic">Cuisinier</p>
+        <hr>
+        <p>Pierre bénéficie de 10 ans de métier dans la cuisine.</p>
+        <p>Après de nombreuses expériences en restaurants ainsi que des voyages culinaires à l’autre bout du monde, il a rejoint l’équipe de Pixel et Béchamel.</p>
+        <p>Passionné par le Japon et les mangas, il aime partager ses découvertes et en apprendre toujours davantage.</p>
+      </div>
+    </div>
+
+    <div class="member">
+      <div class="member_description member_right">
+        <h2>SAMY JOURDAN</h2>
+        <p style="font-style: italic">Photographe culinaire</p>
+        <hr>
+        <p>Samy est notre couteau-suisse de l'équipe. Il est notre retoucheur, motion designer, monteur, vidéaste, rien que cela! Mais aussi il est en charge du pôle vidéo du studio.</p>
+        <p> Il adore sortir des sentiers battus et faire des découvertes. Vous pourrez d’ailleurs, à l’occasion, le croiser faire du kitesurf à Erquy ou Saint Brieuc.</p>
+      </div>
+      <%= image_tag "Sami.jpg", class: "photo-equipe" %>
+    </div>
+
+
+  </div>
 </div>
+
 
 <%= content_for(:title, "Equipe") %>

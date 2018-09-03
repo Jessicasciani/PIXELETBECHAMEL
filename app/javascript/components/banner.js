@@ -4,8 +4,8 @@ import SweetScroll from 'sweet-scroll';
 
 function loadDynamicBannerText() {
   new Typed('#banner-typed-text', {
-    strings: ["PIXEL & BECHAMEL"],
-    typeSpeed: 150,
+    strings: ["PIXEL ET BECHAMEL"],
+    typeSpeed: 100,
     loop: false
   });
 }
