@@ -239,7 +239,8 @@ body {
 #banner-typed-text {
   color: white;
   text-align: center;
-  font-size: 70px;
+  margin-top: 7%;
+  font-size: 67px;
   font-family: Playfair Display;
 }
 
@@ -286,6 +287,7 @@ body {
 .news {
   height: 400px;
   display: flex;
+  padding: 0 15px;
   flex-direction: column;
   justify-content: center;
   background-size: cover;
@@ -295,4 +297,18 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.description-good-xs {
+  margin: 0 20px;
+}
+
+.logo-home-xs {
+  width: 60px;
+  margin-top: 10px;
+}
+
+.xs-part {
+  margin-left: 12px;
+  margin-right: 12px;
 }
