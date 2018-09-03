@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180619104835) do
+ActiveRecord::Schema.define(version: 20180902101608) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -21,6 +21,7 @@ ActiveRecord::Schema.define(version: 20180619104835) do
     t.text     "text"
     t.string   "photo"
     t.string   "title"
+    t.boolean  "published"
   end
 
   create_table "folders", force: :cascade do |t|

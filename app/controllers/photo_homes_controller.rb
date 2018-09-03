@@ -1,6 +1,7 @@
 class PhotoHomesController < ApplicationController
 
   def index
+    @disable_nav = true
     @photo_homes = PhotoHome.all.sort_by{ |t| t.id }
     @photo_home = PhotoHome.new
     @articles = Article.all

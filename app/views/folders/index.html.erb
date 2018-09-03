@@ -14,7 +14,7 @@
               <div class="logo-container">
                 <div class="logoprojects">
                   <div class="front">
-                    <div class="imagesize" style="background-image: linear-gradient(rgba(50,50,50,0.6), rgba(50,50,50,0.4)), url('<%= cl_image_path f.photo, width: 800 %>')";></div>
+                    <div class="imagesize" style="background-image: linear-gradient(rgba(50,50,50,0.6), rgba(50,50,50,0.4)), url('<%= cl_image_path f.photo, width: 800, crop: :limit, fetch_format: :auto, quality: :auto %>')";></div>
                     <h2><%= f.client%></h2>
                   </div>
                   <div class="back">
@@ -44,7 +44,7 @@
 
         <div class="col-xs-12">
           <div class="card-mobile-folder">
-            <div class="imagesize" style="background-image: linear-gradient(rgba(50,50,50,0.6), rgba(50,50,50,0.4)), url('<%= cl_image_path f.photo, width: 800 %>')";>
+            <div class="imagesize" style="background-image: linear-gradient(rgba(50,50,50,0.6), rgba(50,50,50,0.4)), url('<%= cl_image_path f.photo, width: 800, crop: :limit, fetch_format: :auto, quality: :auto %>')";>
             </div>
             <h2 class="absolute-mobile"><%= f.client%></h2>
             <%= link_to "", folder_portfolio_photos_path(f), class: "link-folder"%>

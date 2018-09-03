@@ -14,6 +14,11 @@ class ArticlesController < ApplicationController
 
   def create
     @article = Article.create(article_params)
+    if params[:commit] == 'Publier'
+      @article.published = true
+    elsif params[:commit] == 'Sauvegarder'
+      @article.published = false
+    end
     @article.save
     redirect_to articles_path
   end
@@ -40,7 +45,7 @@ class ArticlesController < ApplicationController
 private
 
   def article_params
-    params.require(:article).permit(:photo, :title, :text)
+    params.require(:article).permit(:photo, :title, :text, :published)
   end
 
 end

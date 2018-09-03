@@ -14,6 +14,7 @@ gem 'tinymce-rails'
 gem 'gmaps4rails'
 gem 'coffee-rails'
 
+gem 'webpacker', '~> 3.5'
 
 
 

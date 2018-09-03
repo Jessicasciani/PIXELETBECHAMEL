@@ -12,6 +12,7 @@
     <meta property="og:image" content="http://res.cloudinary.com/daipxu9yw/image/upload/v1520515140/ig20tnb5irj3uynrb8u8.png">
     <meta property="og:description" content="Pixel et Béchamel est un studio de photographie culinaire vous situé à Paris">
     <meta property="og:site_name" content="Pixel et Béchamel"/>
+    <%#= stylesheet_pack_tag 'application' %>
 
     <%= favicon_link_tag 'logo.png' %>
     <%= csrf_meta_tags %>
@@ -34,11 +35,17 @@
 
   </head>
   <body>
-    <%= render 'shared/header' %>
+    <%= render 'shared/header' unless @disable_nav %>
+
     <div id="wrapper">
-      <%= render 'shared/navbar' %>
+      <%= render 'shared/navbar' unless @disable_nav %>
     </div>
-    <div class="layout-content">
+
+    <% unless @disable_nav %>
+      <div class="layout-content">
+    <% else %>
+      <div class="layout-home">
+    <% end %>
       <%= yield %>
     </div>
      <%= javascript_include_tag "https://maps.google.com/maps/api/js?libraries=places&key=#{ENV['GOOGLE_API_BROWSER_KEY']}" %>
@@ -50,6 +57,6 @@
     <div class="hidden-sm hidden-md hidden-lg">
       <%= render 'shared/footerphone' %>
     </div>
-    <%= yield(:after_js) %>
+    <%= javascript_pack_tag 'application' %>
   </body>
 </html>
