@@ -29,6 +29,11 @@ class ArticlesController < ApplicationController
 
   def update
     @article = Article.find(params[:id])
+    if params[:commit] == 'Publier'
+      @article.published = true
+    elsif params[:commit] == 'Mettre en brouillon'
+      @article.published = false
+    end
     @article.update(article_params)
     redirect_to articles_path
   end

@@ -12,11 +12,9 @@
 
 <% if current_user&.admin  %>
   <%= link_to article_path(@article), method: :delete do %>
-  <p>Delete</p>
-    <i class="fa fa-trash-o poub-article" aria-hidden="true"></i>
+    <i class="far fa-trash-alt poub-article" aria-hidden="true"></i>
   <% end %>
   <%= link_to edit_article_path(@article) do %>
-  <p>Edit</p>
-    <i class="fa fa-pencil-square-o poub-article"></i>
+    <i class="fas fa-pen poub-article"></i>
   <% end %>
 <% end %>
