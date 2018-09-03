@@ -51,6 +51,8 @@
 
 
   <div class="hidden-sm hidden-md hidden-lg">
+    <p class="text-center title-mob">ACTUALITES</p>
+    <hr>
     <% @articles.reverse.each do |article| %>
       <% if article.published == true %>
         <div class="article-xs text-center">

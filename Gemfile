@@ -7,12 +7,13 @@ gem 'puma'
 gem 'rails', '5.0.6'
 gem 'redis'
 gem 'devise', '~> 4.4'
-gem 'figaro'
 gem 'cloudinary'
 gem 'carrierwave', '~> 1.2'
 gem 'tinymce-rails'
 gem 'gmaps4rails'
 gem 'coffee-rails'
+gem 'dotenv-rails', groups: [:development, :test]
+
 
 gem 'webpacker', '~> 3.5'
 
