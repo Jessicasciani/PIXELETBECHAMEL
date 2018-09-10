@@ -9,13 +9,24 @@
         <form action="https://formspree.io/studio@pixeletbechamel.com"
         method="POST" id="form-contact" class="margin-lg">
         <div>
-          <input type="text" name="name" value="Nom" style="width: 150%;" onfocus="if (this.value=='Nom') this.value='';">
+          <p class="input-p">Nom</p>
+          <input type="text" name="name" value="" style="width: 150%;">
         </div>
         <div>
-          <input type="email" name="_replyto" value="Email" style="width: 150%;" onfocus="if (this.value=='Email') this.value='';">
+          <p class="input-p">Prénom</p>
+          <input type="text" name="prenom" value="" style="width: 150%;">
+        </div>
+        <div>
+          <p class="input-p">Société</p>
+          <input type="text" name="societe" value="" style="width: 150%;">
+        </div>
+        <div>
+          <p class="input-p">Email</p>
+          <input type="email" name="_replyto" value="" style="width: 150%;">
         </div>
          <div>
-          <input type="text" name="message" value="Message" style="width: 220%;" onfocus="if (this.value=='Message') this.value='';">
+          <p class="input-p">Message</p>
+          <input type="text" name="message" value="" style="width: 220%;">
         </div>
           <input type="submit" value="Envoyer" id="sub-btn">
         </form>
@@ -55,6 +66,12 @@
         method="POST" id="form-contact">
         <div>
           <input type="text" name="name" value="Nom" onfocus="if (this.value=='Nom') this.value='';">
+        </div>
+         <div>
+          <input type="text" name="name" value="Prénom" onfocus="if (this.value=='Nom') this.value='';">
+        </div>
+         <div>
+          <input type="text" name="name" value="Sociéte" onfocus="if (this.value=='Nom') this.value='';">
         </div>
         <div>
           <input type="email" name="_replyto" value="Email" onfocus="if (this.value=='Email') this.value='';">
