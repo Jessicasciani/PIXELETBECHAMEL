@@ -1,51 +1,84 @@
-  <div class="full-container" style="background-image: url(<%= image_path 'fond.jpg' %>);background-size: cover">
-    <div class="contact hidden-xs hidden-sm">
-      <div class="row">
-        <div class="col-xs-12 col-md-4">
-          <div class="laura-contact text-center">
-            <p>Laura BREGEON</p>
-            <p>06 18 03 27 55</p>
-            <p class="email"><strong><%= mail_to "laura.b@pixeletbechamel.com" %></strong></p>
-          </div>
-        </div>
-        <div class="col-xs-12 col-md-4">
-          <%= image_tag "Maud_Laura.jpg", class: "photo-contact" %>
-        </div>
-        <div class="col-xs-12 col-md-4">
-          <div class="maud-contact text-center">
-            <p>Maud ARGAÏBI</p>
-            <p>07 69 74 45 61</p>
-            <p class="email"><strong><%= mail_to "maud.a@pixeletbechamel.com" %></strong></p>
-          </div>
-
-        </div>
-      </div>
-      <div class="margin">
-        <p class="text-center"><strong><%= mail_to "studio@pixeletbechamel.com" %></strong></p>
-        <p class="text-center">01 40 38 00 75</p>
-        <p class="text-center" style="font-size: 18px; margin-top: 40px; font-style: italic;">N’hésitez pas à nous contacter, nous serions ravies de discuter de vos projets avec vous</p>
-      </div>
+  <div class="full-container">
+    <div class="banner-contact" style="background-image: url(<%= image_path "cover-contact.jpg" %>)">
+      <h2 class="contact-title">CONTACT</h2>
     </div>
 
+    <div class="contact hidden-xs hidden-sm">
+      <p class="text-center p-contact">Parlons de votre projet</p>
+
+        <form action="https://formspree.io/studio@pixeletbechamel.com"
+        method="POST" id="form-contact" class="margin-lg">
+        <div>
+          <input type="text" name="name" value="Nom" style="width: 150%;" onfocus="if (this.value=='Nom') this.value='';">
+        </div>
+        <div>
+          <input type="email" name="_replyto" value="Email" style="width: 150%;" onfocus="if (this.value=='Email') this.value='';">
+        </div>
+         <div>
+          <input type="text" name="message" value="Message" style="width: 220%;" onfocus="if (this.value=='Message') this.value='';">
+        </div>
+          <input type="submit" value="Envoyer" id="sub-btn">
+        </form>
+
+          <div class="laura-contact text-center flex">
+            <%= image_tag "recette.jpg", class: "photo-contact", style: "left:15%" %>
+            <%= image_tag "Maud_Laura.jpg", class: "photo-contact", style: "left:35%"%>
+            <%= image_tag "painperdu.png", class: "photo-contact", style: "right:15%" %>
+            <%= image_tag "cremepotiron.png", class: "photo-contact", style: "right:35%" %>
+
+
+            <div class="margin-top">
+              <p style="border-bottom: 1px solid white; padding-bottom: 7px;">Laura BREGEON</p>
+              <p>06 18 03 27 55</p>
+            </div>
+            <div class="margin-top">
+              <p style="border-bottom: 1px solid white; padding-bottom: 7px;">Maud ARGAÏBI</p>
+              <p>07 69 74 45 61</p>
+            </div>
+            <div class="margin-top">
+              <p style="border-bottom: 1px solid white; padding-bottom: 7px;">Studio</p>
+              <p class="text-center">01 40 38 00 75</p>
+            </div>
+
+          </div>
+
+    </div>
+
+
+
+
+
     <div class="contact hidden-md hidden-lg">
-    <p class="text-center title-mob">CONTACT</p>
-    <hr style="margin-bottom: 60px;">
-      <%= image_tag "Maud_Laura.jpg", class: "photo-contact" %>
-      <div class="laura-contact text-center" style="margin-bottom: 60px;">
-        <p style="margin-top: 60px";>Laura BREGEON</p>
-        <p>06 18 03 27 55</p>
-        <p class="email"><strong><%= mail_to "laura.b@pixeletbechamel.com" %></strong></p>
-      </div>
-      <div class="maud-contact text-center" style="margin-bottom: 60px;">
-        <p>Maud ARGAÏBI</p>
-        <p>07 69 74 45 61</p>
-        <p class="email"><strong><%= mail_to "maud.a@pixeletbechamel.com" %></strong></p>
-      </div>
-      <div class="margin" style="margin-bottom: 60px;">
-        <p class="text-center"><strong><%= mail_to "studio@pixeletbechamel.com" %></strong></p>
-        <p class="text-center">01 40 38 00 75</p>
-        <p class="text-center" style="font-size: 18px; margin-top: 40px; font-style: italic;">N’hésitez pas à nous contacter, nous serions ravies de discuter de vos projets avec vous</p>
-      </div>
+     <p class="text-center p-contact">Parlons de votre projet</p>
+
+        <form action="https://formspree.io/studio@pixeletbechamel.com"
+        method="POST" id="form-contact">
+        <div>
+          <input type="text" name="name" value="Nom" onfocus="if (this.value=='Nom') this.value='';">
+        </div>
+        <div>
+          <input type="email" name="_replyto" value="Email" onfocus="if (this.value=='Email') this.value='';">
+        </div>
+         <div>
+          <input type="text" name="message" value="Message" onfocus="if (this.value=='Message') this.value='';">
+        </div>
+          <input type="submit" value="Envoyer" id="sub-btn">
+        </form>
+        <div class="laura-contact-xs text-center">
+
+            <div class="margin-top">
+              <p>Laura BREGEON</p>
+              <p>06 18 03 27 55</p>
+            </div>
+            <div class="margin-top">
+              <p>Maud ARGAÏBI</p>
+              <p>07 69 74 45 61</p>
+            </div>
+            <div class="margin-top">
+              <p>Studio</p>
+              <p class="text-center">01 40 38 00 75</p>
+            </div>
+        </div>
     </div>
 
 
