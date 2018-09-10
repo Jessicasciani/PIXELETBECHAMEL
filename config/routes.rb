@@ -9,7 +9,7 @@ Rails.application.routes.draw do
   get 'prestations/recettes', to: 'pages#recettes'
   get 'prestations/produits', to: 'pages#produits'
   get 'prestations/stopmotions', to: 'pages#stopmotion'
-  get 'prestations/pack', to: 'pages#packnav'
+  get 'cgu', to: 'pages#cgu'
 
   resources :folders do
     resources :portfolio_photos
