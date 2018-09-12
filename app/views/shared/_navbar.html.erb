@@ -1,4 +1,7 @@
 <div class="navbar hidden-xs hidden-sm">
+  <%= link_to root_path do %>
+    <%= image_tag "logo.png", class: "logo-home-xs" %>
+  <% end %>
   <%= link_to "ÉQUIPE", equipe_path, id: "qui" %>
   <%= link_to "PHOTOS", folders_path %>
   <%= link_to "VIDEOS", video_folders_path %>

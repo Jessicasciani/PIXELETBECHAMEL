@@ -1,18 +1,19 @@
 .navbar {
   font-family: Playfair Display;
-
+  padding: 40px 0;
   display: flex;
   position: fixed;
   z-index: 20;
-  top: 115px;
+  top: 0;
   width: 100%;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   background-color: white;
   margin-bottom: 0 !important;
   height: 30px;
   color: $black;
   a {
+    margin: 0 10px;
     font-size: 17px;
     text-decoration: none;
     color: black;

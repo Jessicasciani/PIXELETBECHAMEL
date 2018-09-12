@@ -6,7 +6,7 @@
 
 .contact {
   font-size: 22px;
-  padding-top: 4%;
+  display: flex;
   a {
     text-decoration:none;
     color: $black;
@@ -19,7 +19,6 @@
 }
 
 .full-container {
-  padding-top: 30px;
   min-height: calc(100vh - 210px);
   position: relative;
 }
@@ -33,12 +32,21 @@
 }
 
 .laura-contact {
+  height: 73vh;
+  width: 35vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   background-color: #565656;
-  padding: 100px 20px 40px 20px;
-  position: relative;
   p {
     color: white;
   }
+}
+
+.contact-left {
+  padding-top: 3%;
+  width: 65vw;
 }
 
 .laura-contact-xs {
@@ -53,7 +61,7 @@
 }
 
 .banner-contact {
-  height: 400px;
+  height: 340px;
   background-size: cover;
   display: flex;
   align-items: center;
@@ -64,6 +72,7 @@
 #form-contact {
   margin-right: 20%;
   display: flex;
+  margin-bottom: 0;
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
@@ -71,7 +80,7 @@
     color: #686868;
     border: none;
     border-bottom: 1px solid #686868;
-    margin-bottom: 35px;
+    margin-bottom: 12px;
   }
 }
 
@@ -86,11 +95,12 @@
   background-color: #565656;
   color: white !important;
   margin-top: 30px;
+  font-size: 18px;
   padding: 5px 25px;
 }
 
 .p-contact {
-  margin-bottom: 40px;
+  margin-bottom: 32px;
   color:#686868;
   font-size: 20px;
 }
@@ -106,7 +116,7 @@
 }
 
 .margin-top {
-  margin-top: 60px;
+  margin-top: 35px;
 }
 
 .contact-title {
