@@ -11,17 +11,18 @@ Rails.application.routes.draw do
   get 'prestations/stopmotions', to: 'pages#stopmotion'
   get 'cgu', to: 'pages#cgu'
 
-  resources :folders do
+
+  resources :folders, :path => 'photos' do
     resources :portfolio_photos
   end
 
-  resources :video_folders do
-    resources :portfolio_motions
+  resources :video_folders, :path => 'videos' do
+    resources :portfolio_motions, :path => 'portfolio_videos'
   end
 
 
-  resources :photo_homes
-  resources :articles
+  resources :photo_homes, :path => 'home'
+  resources :articles, :path => 'actualites'
   # post '/portfolio_photos', to: 'portfolio_photos#create'
   # delete '/portfolio_photos/:id', to: 'portfolio_photos#destroy'
   # get '/portfolio_photos', to: 'pages#portfolio_photo'
