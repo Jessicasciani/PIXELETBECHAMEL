@@ -4,7 +4,6 @@ class PagesController < ApplicationController
   end
 
   def contact
-    @disable_footer = true
   end
 
 end

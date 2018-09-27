@@ -5,7 +5,7 @@
 }
 
 .contact {
-  font-size: 22px;
+  font-size: 18px;
   display: flex;
   a {
     text-decoration:none;
@@ -32,31 +32,34 @@
 }
 
 .laura-contact {
+  margin-right: 10vw;
   height: 73vh;
   width: 35vw;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: #565656;
   p {
-    color: white;
+    color: grey;
   }
 }
 
 .contact-left {
+  margin-left: 15vw;
   padding-top: 3%;
   width: 65vw;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
 .laura-contact-xs {
-  background-color: #565656;
   position: relative;
   margin-top: 20px;
   padding-bottom: 40px;
   padding-top: 25px;
   p {
-    color: white;
+    color: grey;
   }
 }
 
@@ -128,4 +131,12 @@
 
 .margin-lg {
   margin-bottom: 150px;
+}
+
+.avatar {
+  margin-right: 15px;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
 }
